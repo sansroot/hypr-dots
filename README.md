@@ -1,4 +1,4 @@
-# A Catppuccin rice
+# A Monochrome rice
 ## Warning
 **Clearing the cache and logging out of Hyprland will prevent SWWW from setting the wallpaper automatically. You'll need to reapply your theme using the theme-switcher (ALT+C) or rerun the dotfiles installer.**
 
@@ -158,8 +158,9 @@ sudo pacman -S nwg-look
 
 </details>
 
+![black-ezgif com-optimize](https://github.com/user-attachments/assets/872e7b0a-9139-435c-aefe-9b95f588f3b1)
 
-![github yellow](https://github.com/user-attachments/assets/ee0cf1c2-2dc4-4750-a964-34589da1c7dd)
+
 
 
 
