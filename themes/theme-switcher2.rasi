@@ -1,0 +1,152 @@
+/*****----- Configuration -----*****/
+configuration {
+    show-icons:                 false;
+}
+
+/*****----- Global Properties -----*****/
+@import                          "~/.config/rofi/colors.rasi"
+
+
+*{
+    font: "JetBrainsMono Nerd Font 11";
+}
+
+/*****----- Main Window -----*****/
+window {
+    /* properties for window widget */
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       500px;
+    fixed-width: false;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    /* properties for all widgets */
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               20px;
+    border-color:                @selected;
+    cursor:                      "default";
+    background-color:            @background;
+    max-width: 100%;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     15px;
+    margin:                      0px;
+    padding:                     20px;
+    border-radius:               20px;
+    border-color:                @selected;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     15px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px;
+    border-radius:               20px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    children:                    ["prompt"];
+    padding:                     0px 0px 0px 0px;
+}
+
+dummy {
+    background-color:            transparent;
+}
+
+prompt {
+   background-color:            @background-alt;
+   color:                       @foreground;
+   padding:                     9px 200px 10px 200px;
+}
+
+
+/*****----- Message -----*****/
+message {
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     12px;
+    border:                      0px solid;
+    border-radius:               20px;
+    border-color:                @selected;
+    background-color:            @background;
+    text-color:                  @foreground;
+}
+textbox {
+    background-color:            inherit;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+    placeholder-color:           @foreground;
+    blink:                       true;
+    markup:                      true;
+}
+error-message {
+    padding:                     12px;
+    border:                      0px solid;
+    border-radius:               20px;
+    border-color:                @selected;
+    background-color:            @background;
+    text-color:                  @foreground;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1000;
+    lines:                       3;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                false;
+    fixed-columns:               false;
+    
+    spacing:                     15px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               20px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     35px;
+    border:                      0px solid;
+    border-radius:               20px;
+    border-bottom:               5px;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+element-text {
+    font:                        @font;
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+element selected.normal {
+    background-color:            var(selected);
+    text-color:                  var(background);
+}
