@@ -3,6 +3,9 @@
 ## Warning
 **Clearing the cache and logging out of Hyprland will prevent SWWW from setting the wallpaper automatically. You'll need to reapply your theme using the theme-switcher (ALT+C) or rerun the dotfiles installer.**
 
+
+**Rofi can be a bit buggy when dealing with theme-switcher variables, to fix this, just reapply your different palette theme twice.**
+
 ## 1. Dependencies installation
 
 **You will have to manually install the dependencies (sometimes package names changes. Right, ***Hyprshot***?)**
