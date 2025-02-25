@@ -135,7 +135,7 @@
 }
     },
     "network": {
-        "interface": "enp3s0",
+        "interface": "wlan0",
         "format-wifi": "󰘊 {essid}({signalStrength}%)",
         "format-ethernet": "  {ipaddr}/{cidr}",
         "format-disconnected": "disconnected",
