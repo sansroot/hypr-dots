@@ -327,9 +327,9 @@ sudo chmod -R 777 /usr/share/themes
 sudo chmod -R 777 /usr/share/icons
 sudo chmod -R 777 /usr/bin/papirus-folders
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark' &> /dev/null
-gsettings set org.gnome.desktop.interface gtk-theme "hypr-dots-mauve" &> /dev/null
+gsettings set org.gnome.desktop.interface gtk-theme "hypr-dots-black" &> /dev/null
 gsettings set org.gnome.desktop.interface cursor-theme 'hypr-dots' &> /dev/null
-papirus-folders -C cat-mocha-mauve &> /dev/null
+papirus-folders -C grey &> /dev/null
 
 clear
 echo "Now, let's load the Hyprland, Waybar, and Rofi themes into the theme-switcher variable for the first time."
