@@ -53,7 +53,7 @@ sudo pacman -S awesome-terminal-fonts otf-font-awesome ttf-font-awesome ttf-jetb
 ```
 #### Fastfetch: 
 ```
-sudo pacman -S fastfetch 
+sudo pacman -S fastfetch imagemagick w3m
 ```
 #### Oh-my-ZSH: 
 
