@@ -82,16 +82,7 @@
             "key": " ",
             "keyColor": "34", 
         },
-        {
-            "type": "media",
-            "key": "󰝚 ",
-            "keyColor": "34", 
-        },
-        {
-            "type": "player",
-            "key": " ",
-            "keyColor": "34", 
-        },
+
         "break",
         {
             "type": "custom",
