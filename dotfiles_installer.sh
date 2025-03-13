@@ -313,7 +313,9 @@ sed -i "s/wlan0/$interface/" ./themes/themes/monochrome/black/waybar/config.json
 clear
 cp -r ./fastfetch ./hypr ./kitty ./rofi ./waybar -t ~/.config
 cp -r ./themes -t ~/Documents/
-sudo cp -r ./cursor/hypr-dots -t /usr/share/icons/
+
+sudo cp -r ./cursor/hypr-dots* -t /usr/share/icons/
+
 sudo cp -r ./gtkthemes/* -t /usr/share/themes/
 cp -r ./.zshrc ./.p10k.zsh -t ~/
 swww init &> /dev/null
@@ -322,14 +324,18 @@ killall waybar &> /dev/null
 waybar &> /dev/null &
 cd ..
 rm -rf hypr-dots
-hyprctl setcursor hypr-dots 24
+
+hyprctl setcursor hypr-dots-black 24
+
 sudo chmod -R 777 /usr/share/themes
 sudo chmod -R 777 /usr/share/icons
 sudo chmod -R 777 /usr/bin/papirus-folders
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark' &> /dev/null
-gsettings set org.gnome.desktop.interface gtk-theme "hypr-dots-black" &> /dev/null
-gsettings set org.gnome.desktop.interface cursor-theme 'hypr-dots' &> /dev/null
-papirus-folders -C grey &> /dev/null
+gsettings set org.gnome.desktop.interface gtk-theme "hypr-dots-mauve" &> /dev/null
+
+gsettings set org.gnome.desktop.interface cursor-theme 'hypr-dots-black' &> /dev/null
+
+papirus-folders -C cat-mocha-mauve &> /dev/null
 
 clear
 echo "Now, let's load the Hyprland, Waybar, and Rofi themes into the theme-switcher variable for the first time."
