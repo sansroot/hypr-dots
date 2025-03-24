@@ -8,7 +8,7 @@
 
 {
     "logo": {
-    	"source": "~/.config/fastfetch/fastfetch.png",
+    	"source": "~/.config/fastfetch/novo4.png",
     	"type": "kitty",
     	"height": 16,
     	"padding": {
