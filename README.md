@@ -109,6 +109,10 @@ sudo pacman -S nwg-look
 ```
 /sys/bus/hid/drivers/apple/module/parameters
 ```
+#### Keyd for remaping keys at kernel level: 
+```
+sudo pacman -S keyd
+```
 #### Screen share in hyprland: 
 <a>https://gist.github.com/brunoanc/2dea6ddf6974ba4e5d26c3139ffb7580</a>
 
