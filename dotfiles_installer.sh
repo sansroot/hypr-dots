@@ -354,7 +354,7 @@ gsettings set org.gnome.desktop.interface gtk-theme "hypr-dots-red" &> /dev/null
 
 gsettings set org.gnome.desktop.interface cursor-theme 'hypr-dots-red' &> /dev/null
 
-papirus-folders -C cat-mocha-red &> /dev/null
+papirus-folders -C cat-mocha-black &> /dev/null
 
 clear
 echo "Now, let's load the Hyprland, Waybar, and Rofi themes into the theme-switcher variable for the first time."
@@ -441,3 +441,4 @@ echo ""
 echo "*****************************"
 echo "Thanks for using my rice! :)"
 echo "*****************************"
+fi
