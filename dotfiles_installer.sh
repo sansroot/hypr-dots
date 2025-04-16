@@ -441,3 +441,4 @@ echo ""
 echo "*****************************"
 echo "Thanks for using my rice! :)"
 echo "*****************************"
+fi
