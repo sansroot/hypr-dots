@@ -166,9 +166,10 @@ sudo pacman -S keyd
 
 </details>
 
+![anonymous](https://github.com/user-attachments/assets/1f3d55be-19d0-419f-89bd-f915bd871bab)
 
 
-![red](https://github.com/user-attachments/assets/d5c9e98e-212b-41c9-b473-63c789d7cabf)
+
 
 
 
