@@ -76,7 +76,7 @@ sudo pacman -S fastfetch imagemagick w3m
 ## 2. Dotfiles installation
 #### Paste it in your terminal:
 ```
-git clone -b red https://github.com/sansroot/hypr-dots
+git clone -b anonymous https://github.com/sansroot/hypr-dots
 cd hypr-dots
 sudo chmod -R 777 *
 bash ./dotfiles_installer.sh
