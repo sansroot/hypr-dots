@@ -344,7 +344,7 @@ waybar &> /dev/null &
 cd ..
 rm -rf hypr-dots
 
-hyprctl setcursor hypr-dots-black 24
+hyprctl setcursor hypr-dots-anonymous 24
 
 sudo chmod -R 777 /usr/share/themes
 sudo chmod -R 777 /usr/share/icons
@@ -352,9 +352,9 @@ sudo chmod -R 777 /usr/bin/papirus-folders
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark' &> /dev/null
 gsettings set org.gnome.desktop.interface gtk-theme "hypr-dots-black" &> /dev/null
 
-gsettings set org.gnome.desktop.interface cursor-theme 'hypr-dots-black' &> /dev/null
+gsettings set org.gnome.desktop.interface cursor-theme 'hypr-dots-anonymous' &> /dev/null
 
-papirus-folders -C cat-mocha-black &> /dev/null
+papirus-folders -C grey &> /dev/null
 
 clear
 echo "Now, let's load the Hyprland, Waybar, and Rofi themes into the theme-switcher variable for the first time."
@@ -441,3 +441,4 @@ echo ""
 echo "*****************************"
 echo "Thanks for using my rice! :)"
 echo "*****************************"
+fi
