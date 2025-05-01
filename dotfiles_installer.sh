@@ -24,8 +24,9 @@ if [ "$option" == "Y" ]; then
     sed -i "s/DP-1/$monitor/" ./themes/themes/catppuccin/sapphire/hypr/hyprland.conf &>/dev/null
     sed -i "s/DP-1/$monitor/" ./themes/themes/catppuccin/tokyo-night/hypr/hyprland.conf &>/dev/null
     sed -i "s/DP-1/$monitor/" ./themes/themes/catppuccin/yellow/hypr/hyprland.conf &>/dev/null
-    sed -i "s/DP-1/$monitor/" ./themes/themes/monochrome/black/hypr/hyprland.conf &>/dev/null
-    sed -i "s/DP-1/$monitor/" ./themes/themes/monochrome/anonymous/hypr/hyprland.conf &>/dev/null
+    sed -i "s/DP-1/$monitor/" ./themes/themes/misc/black/hypr/hyprland.conf &>/dev/null
+    sed -i "s/DP-1/$monitor/" ./themes/themes/misc/anonymous/hypr/hyprland.conf &>/dev/null
+    sed -i "s/DP-1/$monitor/" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf &>/dev/null
 
     echo "type the refresh rate of your monitor, example [60, 140, 240]"
     read refresh
@@ -42,8 +43,9 @@ if [ "$option" == "Y" ]; then
     sed -i "s/@240/@$refresh/" ./themes/themes/catppuccin/sapphire/hypr/hyprland.conf &>/dev/null
     sed -i "s/@240/@$refresh/" ./themes/themes/catppuccin/tokyo-night/hypr/hyprland.conf &>/dev/null
     sed -i "s/@240/@$refresh/" ./themes/themes/catppuccin/yellow/hypr/hyprland.conf &>/dev/null
-    sed -i "s/@240/@$refresh/" ./themes/themes/monochrome/black/hypr/hyprland.conf &>/dev/null
-    sed -i "s/@240/@$refresh/" ./themes/themes/monochrome/anonymous/hypr/hyprland.conf &>/dev/null
+    sed -i "s/@240/@$refresh/" ./themes/themes/misc/black/hypr/hyprland.conf &>/dev/null
+    sed -i "s/@240/@$refresh/" ./themes/themes/misc/anonymous/hypr/hyprland.conf &>/dev/null
+    sed -i "s/@240/@$refresh/" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf &>/dev/null
 
     echo "type the resolution of your monitor, example [1920x1080, 1280x720]"
     read resolution
@@ -60,8 +62,9 @@ if [ "$option" == "Y" ]; then
     sed -i "s/1920x1080@$refresh/$resolution@$refresh/" ./themes/themes/catppuccin/sapphire/hypr/hyprland.conf &>/dev/null
     sed -i "s/1920x1080@$refresh/$resolution@$refresh/" ./themes/themes/catppuccin/tokyo-night/hypr/hyprland.conf &>/dev/null
     sed -i "s/1920x1080@$refresh/$resolution@$refresh/" ./themes/themes/catppuccin/yellow/hypr/hyprland.conf &>/dev/null
-    sed -i "s/1920x1080@$refresh/$resolution@$refresh/" ./themes/themes/monochrome/black/hypr/hyprland.conf &>/dev/null
-    sed -i "s/1920x1080@$refresh/$resolution@$refresh/" ./themes/themes/monochrome/anonymous/hypr/hyprland.conf &>/dev/null
+    sed -i "s/1920x1080@$refresh/$resolution@$refresh/" ./themes/themes/misc/black/hypr/hyprland.conf &>/dev/null
+    sed -i "s/1920x1080@$refresh/$resolution@$refresh/" ./themes/themes/misc/anonymous/hypr/hyprland.conf &>/dev/null
+    sed -i "s/1920x1080@$refresh/$resolution@$refresh/" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf &>/dev/null
 
     echo "Do you have a second monitor? [Y/N]"
     read hypr
@@ -84,8 +87,9 @@ if [ "$option" == "Y" ]; then
         sed -i "s/DP-2/$monitor/" ./themes/themes/catppuccin/sapphire/hypr/hyprland.conf &>/dev/null
         sed -i "s/DP-2/$monitor/" ./themes/themes/catppuccin/tokyo-night/hypr/hyprland.conf &>/dev/null
         sed -i "s/DP-2/$monitor/" ./themes/themes/catppuccin/yellow/hypr/hyprland.conf &>/dev/null
-        sed -i "s/DP-2/$monitor/" ./themes/themes/monochrome/black/hypr/hyprland.conf &>/dev/null
-        sed -i "s/DP-2/$monitor/" ./themes/themes/monochrome/anonymous/hypr/hyprland.conf &>/dev/null
+        sed -i "s/DP-2/$monitor/" ./themes/themes/misc/black/hypr/hyprland.conf &>/dev/null
+        sed -i "s/DP-2/$monitor/" ./themes/themes/misc/anonymous/hypr/hyprland.conf &>/dev/null
+        sed -i "s/DP-2/$monitor/" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf &>/dev/null
 
         echo "type the refresh rate of your monitor, example [60, 140, 240]"
         read refresh
@@ -102,8 +106,9 @@ if [ "$option" == "Y" ]; then
         sed -i "s/@144/@$refresh/" ./themes/themes/catppuccin/sapphire/hypr/hyprland.conf &>/dev/null
         sed -i "s/@144/@$refresh/" ./themes/themes/catppuccin/tokyo-night/hypr/hyprland.conf &>/dev/null
         sed -i "s/@144/@$refresh/" ./themes/themes/catppuccin/yellow/hypr/hyprland.conf &>/dev/null
-        sed -i "s/@144/@$refresh/" ./themes/themes/monochrome/black/hypr/hyprland.conf &>/dev/null
-        sed -i "s/@144/@$refresh/" ./themes/themes/monochrome/anonymous/hypr/hyprland.conf &>/dev/null
+        sed -i "s/@144/@$refresh/" ./themes/themes/misc/black/hypr/hyprland.conf &>/dev/null
+        sed -i "s/@144/@$refresh/" ./themes/themes/misc/anonymous/hypr/hyprland.conf &>/dev/null
+        sed -i "s/@144/@$refresh/" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf &>/dev/null
 
         echo "type the resolution of your monitor, example [1920x1080, 1280x720]"
         read resolution
@@ -120,8 +125,9 @@ if [ "$option" == "Y" ]; then
         sed -i "s/1920x1080@$refresh/$resolution@$refresh/" ./themes/themes/catppuccin/sapphire/hypr/hyprland.conf &>/dev/null
         sed -i "s/1920x1080@$refresh/$resolution@$refresh/" ./themes/themes/catppuccin/tokyo-night/hypr/hyprland.conf &>/dev/null
         sed -i "s/1920x1080@$refresh/$resolution@$refresh/" ./themes/themes/catppuccin/yellow/hypr/hyprland.conf &>/dev/null
-        sed -i "s/1920x1080@$refresh/$resolution@$refresh/" ./themes/themes/monochrome/black/hypr/hyprland.conf &>/dev/null
-        sed -i "s/1920x1080@$refresh/$resolution@$refresh/" ./themes/themes/monochrome/anonymous/hypr/hyprland.conf &>/dev/null
+        sed -i "s/1920x1080@$refresh/$resolution@$refresh/" ./themes/themes/misc/black/hypr/hyprland.conf &>/dev/null
+        sed -i "s/1920x1080@$refresh/$resolution@$refresh/" ./themes/themes/misc/anonymous/hypr/hyprland.conf &>/dev/null
+        sed -i "s/1920x1080@$refresh/$resolution@$refresh/" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf &>/dev/null
 
         clear
         echo "is the second monitor on the left or on the right side on your main one? [L/R]"
@@ -146,8 +152,9 @@ if [ "$option" == "Y" ]; then
             sed -i "s/1920x0/${orientation}x0/" ./themes/themes/catppuccin/sapphire/hypr/hyprland.conf &>/dev/null
             sed -i "s/1920x0/${orientation}x0/" ./themes/themes/catppuccin/tokyo-night/hypr/hyprland.conf &>/dev/null
             sed -i "s/1920x0/${orientation}x0/" ./themes/themes/catppuccin/yellow/hypr/hyprland.conf &>/dev/null
-            sed -i "s/1920x0/${orientation}x0/" ./themes/themes/monochrome/black/hypr/hyprland.conf &>/dev/null
-            sed -i "s/1920x0/${orientation}x0/" ./themes/themes/monochrome/anonymous/hypr/hyprland.conf &>/dev/null
+            sed -i "s/1920x0/${orientation}x0/" ./themes/themes/misc/black/hypr/hyprland.conf &>/dev/null
+            sed -i "s/1920x0/${orientation}x0/" ./themes/themes/misc/anonymous/hypr/hyprland.conf &>/dev/null
+            sed -i "s/1920x0/${orientation}x0/" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf &>/dev/null
         else
             clear
             echo "type the width of your main display"
@@ -166,8 +173,9 @@ if [ "$option" == "Y" ]; then
             sed -i "s/1920x0/-${orientation}x0/" ./themes/themes/catppuccin/sapphire/hypr/hyprland.conf &>/dev/null
             sed -i "s/1920x0/-${orientation}x0/" ./themes/themes/catppuccin/tokyo-night/hypr/hyprland.conf &>/dev/null
             sed -i "s/1920x0/-${orientation}x0/" ./themes/themes/catppuccin/yellow/hypr/hyprland.conf &>/dev/null
-            sed -i "s/1920x0/-${orientation}x0/" ./themes/themes/monochrome/black/hypr/hyprland.conf &>/dev/null
-            sed -i "s/1920x0/-${orientation}x0/" ./themes/themes/monochrome/anonymous/hypr/hyprland.conf &>/dev/null
+            sed -i "s/1920x0/-${orientation}x0/" ./themes/themes/misc/black/hypr/hyprland.conf &>/dev/null
+            sed -i "s/1920x0/-${orientation}x0/" ./themes/themes/misc/anonymous/hypr/hyprland.conf &>/dev/null
+            sed -i "s/1920x0/-${orientation}x0/" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf &>/dev/null
         fi
     else
         sed -i "s/monitor = DP-2, 1920x1080@144, 1920x0, 1/monitor = DP-2, disabled/" ./hypr/hyprland.conf &>/dev/null
@@ -183,8 +191,9 @@ if [ "$option" == "Y" ]; then
         sed -i "s/monitor = DP-2, 1920x1080@144, 1920x0, 1/monitor = DP-2, disabled/" ./themes/themes/catppuccin/sapphire/hypr/hyprland.conf &>/dev/null
         sed -i "s/monitor = DP-2, 1920x1080@144, 1920x0, 1/monitor = DP-2, disabled/" ./themes/themes/catppuccin/tokyo-night/hypr/hyprland.conf &>/dev/null
         sed -i "s/monitor = DP-2, 1920x1080@144, 1920x0, 1/monitor = DP-2, disabled/" ./themes/themes/catppuccin/yellow/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor = DP-2, 1920x1080@144, 1920x0, 1/monitor = DP-2, disabled/" ./themes/themes/monochrome/black/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor = DP-2, 1920x1080@144, 1920x0, 1/monitor = DP-2, disabled/" ./themes/themes/monochrome/anonymous/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = DP-2, 1920x1080@144, 1920x0, 1/monitor = DP-2, disabled/" ./themes/themes/misc/black/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = DP-2, 1920x1080@144, 1920x0, 1/monitor = DP-2, disabled/" ./themes/themes/misc/anonymous/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = DP-2, 1920x1080@144, 1920x0, 1/monitor = DP-2, disabled/" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf &>/dev/null
         sed -i "s/monitor:DP-2/monitor:DP-1/" ./hypr/hyprland.conf &>/dev/null
         sed -i "s/monitor:DP-2/monitor:DP-1/" ./themes/themes/catppuccin/blue/hypr/hyprland.conf &>/dev/null
         sed -i "s/monitor:DP-2/monitor:DP-1/" ./themes/themes/catppuccin/dawn/hypr/hyprland.conf &>/dev/null
@@ -198,8 +207,9 @@ if [ "$option" == "Y" ]; then
         sed -i "s/monitor:DP-2/monitor:DP-1/" ./themes/themes/catppuccin/sapphire/hypr/hyprland.conf &>/dev/null
         sed -i "s/monitor:DP-2/monitor:DP-1/" ./themes/themes/catppuccin/tokyo-night/hypr/hyprland.conf &>/dev/null
         sed -i "s/monitor:DP-2/monitor:DP-1/" ./themes/themes/catppuccin/yellow/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor:DP-2/monitor:DP-1/" ./themes/themes/monochrome/black/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor:DP-2/monitor:DP-1/" ./themes/themes/monochrome/anonymous/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor:DP-2/monitor:DP-1/" ./themes/themes/misc/black/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor:DP-2/monitor:DP-1/" ./themes/themes/misc/anonymous/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor:DP-2/monitor:DP-1/" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf &>/dev/null
     fi
 
     clear
@@ -218,10 +228,12 @@ if [ "$option" == "Y" ]; then
             sed -i "s/gaps_in = 10/gaps_in = $gaps_in/" ./themes/themes/catppuccin/$item/hypr/hyprland.conf
             sed -i "s/gaps_out = 40/gaps_out = $gaps_out/" ./themes/themes/catppuccin/$item/hypr/hyprland.conf
         done
-        sed -i "s/gaps_in = 10/gaps_in = $gaps_in/" ./themes/themes/monochrome/black/hypr/hyprland.conf
-        sed -i "s/gaps_out = 40/gaps_out = $gaps_out/" ./themes/themes/monochrome/black/hypr/hyprland.conf
-        sed -i "s/gaps_in = 10/gaps_in = $gaps_in/" ./themes/themes/monochrome/anonymous/hypr/hyprland.conf
-        sed -i "s/gaps_out = 40/gaps_out = $gaps_out/" ./themes/themes/monochrome/anonymous/hypr/hyprland.conf
+        sed -i "s/gaps_in = 10/gaps_in = $gaps_in/" ./themes/themes/misc/black/hypr/hyprland.conf
+        sed -i "s/gaps_out = 40/gaps_out = $gaps_out/" ./themes/themes/misc/black/hypr/hyprland.conf
+        sed -i "s/gaps_in = 10/gaps_in = $gaps_in/" ./themes/themes/misc/anonymous/hypr/hyprland.conf
+        sed -i "s/gaps_in = 10/gaps_in = $gaps_in/" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf
+        sed -i "s/gaps_out = 40/gaps_out = $gaps_out/" ./themes/themes/misc/anonymous/hypr/hyprland.conf
+        sed -i "s/gaps_out = 40/gaps_out = $gaps_out/" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf
     fi
 
     clear
@@ -240,10 +252,12 @@ if [ "$option" == "Y" ]; then
             sed -i "s/active_opacity = 0.9/active_opacity = $active_opacity/" ./themes/themes/catppuccin/$item1/hypr/hyprland.conf
             sed -i "s/inactive_opacity = 0.3/inactive_opacity = $inactive_opacity/" ./themes/themes/catppuccin/$item1/hypr/hyprland.conf
         done
-        sed -i "s/active_opacity = 0.9/active_opacity = $active_opacity/" ./themes/themes/monochrome/black/hypr/hyprland.conf
-        sed -i "s/inactive_opacity = 0.3/inactive_opacity = $inactive_opacity/" ./themes/themes/monochrome/black/hypr/hyprland.conf
-        sed -i "s/active_opacity = 0.9/active_opacity = $active_opacity/" ./themes/themes/monochrome/anonymous/hypr/hyprland.conf
-        sed -i "s/inactive_opacity = 0.3/inactive_opacity = $inactive_opacity/" ./themes/themes/monochrome/anonymous/hypr/hyprland.conf
+        sed -i "s/active_opacity = 0.9/active_opacity = $active_opacity/" ./themes/themes/misc/black/hypr/hyprland.conf
+        sed -i "s/inactive_opacity = 0.3/inactive_opacity = $inactive_opacity/" ./themes/themes/misc/black/hypr/hyprland.conf
+        sed -i "s/active_opacity = 0.9/active_opacity = $active_opacity/" ./themes/themes/misc/anonymous/hypr/hyprland.conf
+        sed -i "s/active_opacity = 0.9/active_opacity = $active_opacity/" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf
+        sed -i "s/inactive_opacity = 0.3/inactive_opacity = $inactive_opacity/" ./themes/themes/misc/anonymous/hypr/hyprland.conf
+        sed -i "s/inactive_opacity = 0.3/inactive_opacity = $inactive_opacity/" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf
     fi
     clear
     echo "would you like to enable blur? [Y/N]"
@@ -266,18 +280,21 @@ if [ "$option" == "Y" ]; then
                 sed -i "s/size = 1/size = $blur_size/" ./themes/themes/catppuccin/$item3/hypr/hyprland.conf
                 sed -i "s/passes = 5/passes = $blur_passes/" ./themes/themes/catppuccin/$item3/hypr/hyprland.conf
             done
-            sed -i "s/size = 1/size = $blur_size/" ./themes/themes/monochrome/black/hypr/hyprland.conf
-            sed -i "s/passes = 5/passes = $blur_passes/" ./themes/themes/monochrome/black/hypr/hyprland.conf
-            sed -i "s/size = 1/size = $blur_size/" ./themes/themes/monochrome/anonymous/hypr/hyprland.conf
-            sed -i "s/passes = 5/passes = $blur_passes/" ./themes/themes/monochrome/anonymous/hypr/hyprland.conf
+            sed -i "s/size = 1/size = $blur_size/" ./themes/themes/misc/black/hypr/hyprland.conf
+            sed -i "s/passes = 5/passes = $blur_passes/" ./themes/themes/misc/black/hypr/hyprland.conf
+            sed -i "s/size = 1/size = $blur_size/" ./themes/themes/misc/anonymous/hypr/hyprland.conf
+            sed -i "s/size = 1/size = $blur_size/" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf
+            sed -i "s/passes = 5/passes = $blur_passes/" ./themes/themes/misc/anonymous/hypr/hyprland.conf
+            sed -i "s/passes = 5/passes = $blur_passes/" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf
         fi
     else
         sed -i "s/true, blur/false, blur/" ./hypr/hyprland.conf
         for item2 in "${lista[@]}"; do
             sed -i "s/true, blur/false, blur/" ./themes/themes/catppuccin/$item2/hypr/hyprland.conf
         done
-        sed -i "s/true, blur/false, blur/" ./themes/themes/monochrome/black/hypr/hyprland.conf
-        sed -i "s/true, blur/false, blur/" ./themes/themes/monochrome/anonymous/hypr/hyprland.conf
+        sed -i "s/true, blur/false, blur/" ./themes/themes/misc/black/hypr/hyprland.conf
+        sed -i "s/true, blur/false, blur/" ./themes/themes/misc/anonymous/hypr/hyprland.conf
+        sed -i "s/true, blur/false, blur/" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf
     fi
     clear
     echo "would you like to enable animations? [Y/N]"
@@ -289,8 +306,9 @@ if [ "$option" == "Y" ]; then
         for item4 in "${lista[@]}"; do
             sed -i "s/true, animations/false, animations/" ./themes/themes/catppuccin/$item4/hypr/hyprland.conf
         done
-        sed -i "s/true, animations/false, animations/" ./themes/themes/monochrome/black/hypr/hyprland.conf
-        sed -i "s/true, animations/false, animations/" ./themes/themes/monochrome/anonymous/hypr/hyprland.conf
+        sed -i "s/true, animations/false, animations/" ./themes/themes/misc/black/hypr/hyprland.conf
+        sed -i "s/true, animations/false, animations/" ./themes/themes/misc/anonymous/hypr/hyprland.conf
+        sed -i "s/true, animations/false, animations/" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf
     fi
     clear
     echo "would you like to enable border glow? [Y/N]"
@@ -302,8 +320,9 @@ if [ "$option" == "Y" ]; then
         for item5 in "${lista[@]}"; do
             sed -i "s/true, glow/false, glow/" ./themes/themes/catppuccin/$item5/hypr/hyprland.conf
         done
-        sed -i "s/true, glow/false, glow/" ./themes/themes/monochrome/black/hypr/hyprland.conf
-        sed -i "s/true, glow/false, glow/" ./themes/themes/monochrome/anonymous/hypr/hyprland.conf
+        sed -i "s/true, glow/false, glow/" ./themes/themes/misc/black/hypr/hyprland.conf
+        sed -i "s/true, glow/false, glow/" ./themes/themes/misc/anonymous/hypr/hyprland.conf
+        sed -i "s/true, glow/false, glow/" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf
 else
     echo "When you log on hyprland, run this script again to set you monitor and refresh rate"
     sleep 4
@@ -326,8 +345,9 @@ sed -i "s/wlan0/$interface/" ./themes/themes/catppuccin/red/waybar/config.jsonc 
 sed -i "s/wlan0/$interface/" ./themes/themes/catppuccin/sapphire/waybar/config.jsonc &>/dev/null
 sed -i "s/wlan0/$interface/" ./themes/themes/catppuccin/tokyo-night/waybar/config.jsonc &>/dev/null
 sed -i "s/wlan0/$interface/" ./themes/themes/catppuccin/yellow/waybar/config.jsonc &>/dev/null
-sed -i "s/wlan0/$interface/" ./themes/themes/monochrome/black/waybar/config.jsonc &>/dev/null
-sed -i "s/wlan0/$interface/" ./themes/themes/monochrome/anonymous/waybar/config.jsonc &>/dev/null
+sed -i "s/wlan0/$interface/" ./themes/themes/misc/black/waybar/config.jsonc &>/dev/null
+sed -i "s/wlan0/$interface/" ./themes/themes/misc/anonymous/waybar/config.jsonc &>/dev/null
+sed -i "s/wlan0/$interface/" ./themes/themes/misc/anonymous-green/waybar/config.jsonc &>/dev/null
 
 clear
 cp -r ./fastfetch ./hypr ./kitty ./rofi ./waybar -t ~/.config
