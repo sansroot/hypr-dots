@@ -1,0 +1,147 @@
+
+# Please keep this gtkrc in sync with the other ones from Clearlooks based themes.
+
+gtk-color-scheme = "bg_color:#3f3e3e"
+gtk-color-scheme = "fg_color:#EDF0F5"
+gtk-color-scheme = "base_color:#323232"
+gtk-color-scheme = "text_color:#EDF0F5"
+gtk-color-scheme = "selected_bg_color:#669900"
+gtk-color-scheme = "selected_fg_color:#d1ff96"
+gtk-color-scheme = "tooltip_bg_color:#203d79"
+gtk-color-scheme = "tooltip_fg_color:#66cbec"
+gtk-color-scheme = "disabled_bg_color:#493e37"
+gtk-color-scheme = "disabled_fg_color:#7c675a"
+gtk-color-scheme = "button_bg_color:#4e584d"
+gtk-color-scheme = "button_fg_color:#EDF0F5"
+gtk-color-scheme = "button_checked_bg_color:#669900"
+gtk-color-scheme = "button_checked_fg_color:#d1ff96"
+
+style "main" {
+
+  bg[NORMAL]        = @bg_color
+  bg[PRELIGHT]      = shade (1.02, @bg_color)
+  bg[SELECTED]      = @selected_bg_color
+  bg[INSENSITIVE]   = @disabled_bg_color
+  bg[ACTIVE]        = shade (0.9, @bg_color) # shade (0.9, @bg_color) # @selected_bg_color
+
+  fg[NORMAL]        = @fg_color
+  fg[PRELIGHT]      = @fg_color
+  fg[SELECTED]      = @selected_fg_color
+  fg[INSENSITIVE]   = @disabled_fg_color
+  fg[ACTIVE]        = @fg_color # @fg_color # @selected_fg_color
+
+  text[NORMAL]      = @text_color
+  text[PRELIGHT]    = @text_color
+  text[SELECTED]    = @selected_fg_color
+  text[INSENSITIVE] = @disabled_fg_color
+  text[ACTIVE]      = @selected_fg_color
+
+  base[NORMAL]      = @base_color
+  base[PRELIGHT]    = shade (0.95, @bg_color)
+  base[SELECTED]    = @selected_bg_color
+  base[INSENSITIVE] = @disabled_bg_color
+  base[ACTIVE]      = shade (0.9, @selected_bg_color)
+
+  GtkCheckButton::indicator-size = 16
+  GtkToolbar::shadow-type = GTK_SHADOW_NONE # Makes toolbars flat and unified
+  GtkMenuBar::shadow-type = GTK_SHADOW_NONE # Makes menubars flat and unified
+  GtkButton::shadow-type = GTK_SHADOW_NONE
+  #xthickness = 2
+  #ythickness = 2
+  #engine "redmond95" {}
+}
+
+style "notebook-menu" {
+bg[NORMAL]        = mix(0.5, @base_color, @bg_color) # selected tab background color
+bg[ACTIVE]        = @base_color # unselected buttons background color
+fg[ACTIVE]        = mix(0.5, @text_color, @base_color)
+fg[NORMAL]        = mix(0.5, @text_color, @base_color)
+text[ACTIVE]      = mix(0.5, @text_color, @bg_color)
+text[NORMAL]      = mix(0.5, @text_color, @bg_color)
+
+fg[PRELIGHT]        = mix(0.5, @text_color, @base_color)
+}
+
+style "menubar" {
+fg[PRELIGHT]      = @selected_fg_color #fg selected
+bg[PRELIGHT]        = @selected_bg_color #bg selected
+fg[ACTIVE]      = @selected_fg_color #fg selected
+bg[ACTIVE]        = @selected_bg_color #bg selected
+fg[SELECTED]      = @selected_fg_color #fg selected
+bg[SELECTED]        = @selected_bg_color #bg selected
+
+
+#fg[NORMAL]        = "#777777" #unactive tab in ffbrowser
+#bg[NORMAL]        = "#6E3227"  #background for all tabs in ffbrowser
+}
+
+style "progress-bar" {
+bg[PRELIGHT] = @selected_bg_color
+bg[NORMAL]   = @base_color
+}
+
+style "scrollbar" {
+GtkScrollbar::has-secondary-forward-stepper = 0
+GtkScrollbar::has-secondary-backward-stepper = 0
+GtkScrollbar::slider_width = 12
+GtkScrollbar::stepper_size = 12
+GtkScrollbar::trough-side-details = 0
+GtkScrollbar::trough-border = 2
+
+bg[NORMAL]        = @button_bg_color # scrollbar foreground color
+bg[PRELIGHT]      = shade(1.05, @button_bg_color) # scrollbar prelight color
+bg[ACTIVE]        = @base_color # scrollbar background color
+}
+
+style "button" {
+bg[NORMAL]        = @button_bg_color
+fg[NORMAL]        = @button_fg_color
+bg[PRELIGHT]      = shade (1.1, @button_bg_color)
+bg[ACTIVE]        = @button_checked_bg_color
+fg[ACTIVE]        = @button_checked_fg_color
+}
+
+style "standard-scales"
+{
+GtkRange::slider-width = 16
+GtkScale::slider-length = 16
+bg[PRELIGHT]      = shade (1.02, @button_bg_color) #slider hover
+bg[ACTIVE]      = @base_color # trough color
+bg[INSENSITIVE] = @disabled_bg_color
+
+}
+
+style "tooltips" {
+xthickness = 4
+ythickness = 4
+
+bg[NORMAL]        = @tooltip_bg_color
+fg[NORMAL]        = @tooltip_fg_color
+}
+
+style "checkradio" {
+text[NORMAL] = mix(0.2, @selected_bg_color, @text_color)
+# Is there no way to color background of checked radio/checks??
+}
+
+class "GtkWidget" style "main"
+class "GtkScrollbar" style "scrollbar"
+class "GtkProgressBar" style "progress-bar"
+class "*MenuBar.*MenuItem*" style "menubar"
+class "*Scale*" style "standard-scales"
+widget_class "*MenuBar.*MenuItem*" style "menubar"
+widget_class "*MenuItem*" style "menubar"
+widget_class "*GtkButton*" style "button"
+widget_class "*ToggleButton" style "button"
+widget_class "*ComboButton" style "button"
+widget_class "*LinkButton" style "button"
+widget_class "*ListButton" style "button"
+widget_class "*FontButton" style "button"
+widget_class "*ColorButton" style "button"
+widget_class "*OptionMenu" style "button"
+widget_class "*Check*" style "checkradio" #maybe too much carpet-bombing style here?
+widget_class "*Radio*" style "checkradio"
+###########################################"
+#If edited as widget_class,can overwrite main stlye colors
+class "GtkNotebook" style "notebook-menu"
+##########################################################

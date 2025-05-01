@@ -1,0 +1,16 @@
+/*
+these colors are exported for the window manager and shouldn't be used in applications,
+read if you used those and something break with a version upgrade you're on your own... */
+@define-color wm_title $headerbar_fg_color;
+@define-color wm_unfocused_title $headerbar_backdrop_color;
+@define-color wm_highlight rgba(255, 255, 255, 0.05);
+@define-color wm_bg $headerbar_bg_color;
+@define-color wm_unfocused_bg $headerbar_backdrop_color;
+@define-color xfwm4_title $headerbar_fg_color;
+@define-color xfwm4_unfocused_title $headerbar_backdrop_color;
+/* content view background such as thumbnails view in Photos or Boxes */
+@define-color content_view_bg $base_color;
+/* Very contrasty background for text views (@theme_text_color foreground) */
+@define-color text_view_bg $base_color;
+/* placeholder for entries */
+@define-color placeholder_text_color mix($base_color, $text_color, 0.5);

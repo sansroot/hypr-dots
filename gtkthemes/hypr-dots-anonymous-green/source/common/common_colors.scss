@@ -1,0 +1,102 @@
+// Common colors
+
+$base_color: $text_widget_bg;
+$text_color: $text_widget_fg;
+$bg_color: $window_bg;
+$fg_color: $window_fg;
+
+$selected_fg_color: $selected_fg;
+$selected_bg_color: $selected_bg;
+
+$selected_borders_color: if($variant== 'light', darken($selected_bg_color, 15%), darken($selected_bg_color, 30%));
+
+$borders_color: if($variant == 'light', darken($bg_color, 10%), lighten($bg_color, 10%));
+$alt_borders_color: if($variant == 'light', darken($bg_color, 20%), lighten($bg_color, 18%));
+$borders_edge: if($variant == 'light', transparentize(white, 0.2), transparentize($fg_color, 0.93));
+
+$link_color: $link_fg; //mix($successc, $fg_color, 30%);//if($variant == 'light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 20%));
+$link_visited_color: $link_visited_fg; //mix($selected_bg_color, $fg_color, 20%); //if($variant == 'light', darken($selected_bg_color, 20%), lighten($selected_bg_color, 10%));
+$top_hilight: $borders_edge;
+$dark_fill: mix($borders_color, $bg_color, 50%);
+
+$menu_color: if($variant == 'light', $base_color, mix($bg_color, $base_color, 20%));
+
+$scrollbar_bg_color: if($variant == 'light', mix($bg_color, $fg_color, 80%), mix($base_color, $bg_color, 50%));
+$scrollbar_slider_color: $button_bg; //mix($fg_color, $bg_color, 60%);
+$scrollbar_slider_hover_color: mix($button_bg, $selected_bg_color, 50%);
+$scrollbar_slider_active_color: if($variant=='light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 10%));
+
+$warning_color: $warningc;
+$error_color: $errorc;
+$success_color: $successc;
+$destructive_color: $errorc;
+
+//$warning_fg: if($variant == 'light', shade($warningc,0.5), shade($warningc,1.3));
+//$warning_bg: if($variant == 'light', shade($warningc,1.3), shade($warningc,0.5));
+
+$osd_fg_color: $osd_fg;
+$osd_text_color: $osd_fg;
+$osd_bg_color: transparentize($osd_bg, 0.3); //if($variant == 'light', transparentize(darken(desaturate($osd_bg, 100%), 4%),0.3), transparentize(darken(desaturate($osd_bg, 100%), 10%),0.3));
+
+
+$osd_insensitive_bg_color: transparentize(mix($osd_fg_color, opacify($osd_bg_color, 1), 10%), 0.5);
+$osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 50%);
+$osd_borders_color: $hint_fg;
+
+$sidebar_bg_color: mix($bg_color, $base_color, 50%);
+
+$tooltip_borders_color: $hint_fg;
+$shadow_color: transparentize(black, 0.9);
+$shadow_hard_color: opacify($shadow_color, 1);
+
+$drop_target_color: $success_color;
+
+//insensitive state derived colors
+$insensitive_fg_color: $disabled_fg;
+$insensitive_bg_color: $disabled_bg;
+$insensitive_borders_color: mix($borders_color, $disabled_fg, 50%);
+
+//colors for the backdrop state, derived from the main colors.
+$backdrop_base_color: if($variant == 'light', darken($base_color, 1%), lighten($base_color, 1%));
+$backdrop_text_color: mix($text_color, $backdrop_base_color, 80%);
+$backdrop_bg_color: $bg_color;
+$backdrop_fg_color: mix($fg_color, $backdrop_bg_color, 50%);
+$backdrop_insensitive_color: if($variant == 'light', darken($backdrop_bg_color, 15%), lighten($backdrop_bg_color, 15%));
+$backdrop_selected_fg_color: mix($backdrop_text_color, $selected_fg_color, 50%);
+$backdrop_selected_bg_color: transparentize(desaturate($selected_bg_color,50%),0.3);
+$backdrop_borders_color: mix($borders_color, $bg_color, 80%);
+$backdrop_dark_fill: mix($backdrop_borders_color, $backdrop_bg_color, 35%);
+
+//special cased widget colors
+$suggested_bg_color: $successc;
+$suggested_border_color: if($variant == 'light', darken($successc, 20%), lighten($successc, 20%));
+$progress_bg_color: $selected_bg_color;
+$progress_border_color: if($variant == 'light', darken($progress_bg_color, 5%), lighten($progress_bg_color, 5%)) ;
+$checkradio_bg_color: $selected_bg_color; //if($variant == 'light', $selected_bg_color, lighten($selected_bg_color,10%));
+$checkradio_fg_color: $selected_fg_color;
+$checkradio_borders_color: $selected_fg_color;//if($variant == 'light', darken($checkradio_bg_color,20%), darken($checkradio_bg_color,40%));
+$focus_border_color: $selected_bg_color;// if($variant == 'light', transparentize($selected_bg_color, 0.5), transparentize($selected_bg_color, 0.3));
+
+$_dot_color: $warning_color;//if($variant=='light', $selected_bg_color, lighten($selected_bg_color,15%));
+
+
+// in window decoration
+
+$_wm_border: currentColor; //if($variant=='light', transparentize(black, 0.77), transparentize(black, 0.25));
+$_wm_border_backdrop: gtkalpha(currentColor, 0.75); //if($variant=='light', transparentize(black, 0.82), transparentize(black, 0.25));
+
+
+
+//these are for libadwaite code included in some sass (such as tab-views)
+
+$headerbar_bg_color: $titlebar_active_bg;
+$headerbar_fg_color: $titlebar_active_fg;
+$headerbar_border_color: $alt_borders_color;
+$headerbar_backdrop_color: $titlebar_backdrop_bg;
+$accent_color: $selected_bg_color;
+$selected_color: $selected_bg_color;
+$headerbar_shade_color: if($variant == 'light', transparentize(black, .88), transparentize(black, .64));
+$selected_active_color: gtkalpha(currentColor, .19);
+$window_outline_color: $_wm_border;
+$thumbnail_bg_color: if($variant == 'light', #ffffff, #383838); //might need better integration with colors...
+$thumbnail_fg_color: if($variant == 'light', transparentize(black, .2), white); //might need better integration with colors...
