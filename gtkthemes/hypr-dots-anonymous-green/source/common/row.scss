@@ -1,0 +1,43 @@
+row {
+	@if $gtk==4 {
+		@include focus-ring();
+	}
+	transition: all 500ms $ease-out-quad;
+	border: 1px solid transparent;
+	//&:hover { transition: none; }
+	@extend %click-animation;
+	//&:backdrop { transition: $backdrop_transition; }
+	&:selected { @extend %selected_items; }
+		.nested > & {
+		background-color: transparentize(if($variant == 'light', black, white), 0.9);
+	}
+	&.activatable {
+	 // this is for indicathing which row generated a popover see https://bugzilla.gnome.org/show_bug.cgi?id=754411
+			&:hover { @include button(hover); }
+
+			&:active { @include button(active); }
+
+			//&:backdrop:hover { background-color: transparent; }
+
+			&:selected, &.has-open-popup {
+			  @include button(checked);
+			}
+			&:disabled {@include button(disabled);}
+	}
+	
+}
+
+button row.activatable {
+	&, &:hover, &:active, &:selected, &.has-open-popup {
+		background-image: none;
+		background-color: transparent;
+		box-shadow: none;
+		border-color: transparent;
+	}
+}
+
+	
+
+
+  
+
