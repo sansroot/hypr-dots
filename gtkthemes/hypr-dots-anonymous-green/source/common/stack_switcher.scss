@@ -1,0 +1,8 @@
+stackswitcher, .stack-switcher, %stackswitcher {
+    border-radius: 9999px;
+    box-shadow: inset shadow(normal);
+    headerbar &, windowhandle & {
+        margin: 3px 0px;
+        & > button {min-height: $button_min_height - 5px;}
+    } //otherwise it's as tall as the headerbar, which doesn't look good.
+}

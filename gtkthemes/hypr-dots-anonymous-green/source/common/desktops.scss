@@ -1,0 +1,93 @@
+// Other desktops fixes
+
+// XFCE
+
+
+XfdesktopIconView.view {
+    text-shadow: 0 0 2px $base_color, 0 0 2px $base_color, 0 0 2px $base_color;
+    color: $text_color;
+    background-color: transparent;
+    
+    .rubberband {
+        background-color: gtkalpha($selected_bg_color, 0.5);
+    }
+}
+
+XfdesktopIconView.view:active {
+    text-shadow: none;
+    color: $selected_fg_color;
+    background-color: gtkalpha($selected_bg_color, 0.5);
+}
+
+// Nautilus improvements
+.nautilus-window {
+    
+  .nautilus-list-view {
+    columnview, listview, cell {
+            margin: 0;
+    }
+    cell {padding: 0;}
+    
+    row {margin: 0;}
+    
+  }
+  .floating-bar {
+  	background-color: $osd_bg_color;
+  	color: $osd_fg_color;
+  	box-shadow: 0 0 0 1px gtkalpha($osd_fg_color, 0.3);
+  	}
+}
+
+#NautilusPathBar { //all to overwrite libadwaita
+    padding: 2px;
+    border: 1px solid gtkalpha(currentColor, 0.3);
+    button, menubutton {
+        margin: 0;
+    }
+    background-color: transparent;
+    > scrolledwindow {
+        background-color: transparent;
+        
+        > viewport {
+            padding: 2px;
+        }
+        > undershoot {
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
+        }
+    }
+    
+}
+
+//headerbars fixes 
+headerbar {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+.top-bar {
+    background-color: $titlebar_active_bg;
+    color: $titlebar_active_fg;
+    
+    &:backdrop {
+        background-color: $titlebar_backdrop_bg;
+        color: $titlebar_backdrop_fg;
+        transition: none;//$backdrop_transition;
+    }
+    .collapse-spacing {
+        padding: 0;
+    }
+  }
+
+
+//Gnome Calculator
+.history-view {
+	background-color: $base_color;
+}
+
+windowhandle > box {
+padding: 0;
+}
