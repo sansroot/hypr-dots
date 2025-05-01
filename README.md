@@ -1,4 +1,4 @@
-# A Catppuccin rice
+# A Green/Hackers rice
 ## Warning
 **Clearing the cache and logging out of Hyprland will prevent SWWW from setting the wallpaper automatically. You'll need to reapply your theme using the theme-switcher (ALT+C) or rerun the dotfiles installer.**
 
