@@ -1,0 +1,46 @@
+#! /bin/bash
+
+# Gray light green scheme
+
+window_fg="#241f31"
+window_bg="#a7a7a7"
+text_widget_fg="#241f31"
+text_widget_bg="#908f8d"
+
+selected_fg="#000000"
+selected_bg="#b0dd7e"
+
+button_fg="#241f31"
+button_bg="#bcbeb9"
+button_checked_bg=$selected_bg
+button_checked_fg=$selected_fg
+
+
+disabled_fg="#552222"
+disabled_bg="#938989"
+
+# Usually an automatic fg color on these backgrounds should check this value!
+
+warningc="#f57900"
+errorc="#990000"
+successc="#73d216"
+
+
+titlebar_active_fg=$selected_fg
+titlebar_active_bg=$selected_bg
+
+titlebar_backdrop_fg=$window_fg
+titlebar_backdrop_bg=$window_bg
+
+hint_fg="#002269"
+hint_bg="#6789b4"
+
+osd_fg=$hint_fg
+osd_bg=$hint_bg
+
+link_fg="#004B91"
+link_visited_fg="#680091"
+
+
+export	window_fg	window_bg	text_widget_fg	text_widget_bg		selected_fg	selected_bg		button_fg	button_bg	button_checked_bg	button_checked_fg			disabled_fg	disabled_bg				warningc	errorc	successc			titlebar_active_fg	titlebar_active_bg		titlebar_backdrop_fg	titlebar_backdrop_bg		hint_fg	hint_bg		osd_fg	osd_bg		link_fg	link_visited_fg
+

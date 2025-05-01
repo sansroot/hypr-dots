@@ -1,0 +1,37 @@
+"$window_fg: "$vwindow_fg;
+$window_bg: $vwindow_bg;
+$text_widget_fg: $vtext_widget_fg;
+$text_widget_bg: $vtext_widget_bg;
+
+$selected_fg: $vselected_fg;
+$selected_bg: $vselected_bg;
+
+$button_fg: $vbutton_fg;
+$button_bg: $vbutton_bg;
+$button_checked_bg: $vbutton_checked_bg;
+$button_checked_fg: $vbutton_checked_fg;
+
+
+$disabled_fg: $vdisabled_fg;
+$disabled_bg: $vdisabled_bg;
+
+/*Usually an automatic fg color on these backgrounds should check this value!*/
+$warningc: $vdisabled_bg;
+$errorc: $verrorc;
+$successc: $vsuccessc;
+
+
+$titlebar_active_fg: $vtitlebar_active_fg;
+$titlebar_active_bg: $vtitlebar_active_bg;
+
+$titlebar_backdrop_fg: $vtitlebar_backdrop_fg;
+$titlebar_backdrop_bg: $vtitlebar_backdrop_bg;
+
+$hint_fg: $vhint_fg;
+$hint_bg: $vhint_bg;
+
+$osd_fg: $vosd_fg;
+$osd_bg: $vosd_bg;
+
+$link_fg: $vlink_fg;
+$link_visited_fg: $vlink_visited_fg;
