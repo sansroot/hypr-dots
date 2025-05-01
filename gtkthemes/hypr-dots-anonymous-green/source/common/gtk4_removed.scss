@@ -1,0 +1,515 @@
+//This file is just a quick placeholder for removed code, so I can easily inspect it when I see bugs in my code that replaces this.
+//It is not used when compiling the theme
+
+// _drawing.scss
+
+@mixin button($t, $c:$_default_button_c, $tc:$fg_color) {
+//
+// Button drawing function
+//
+// $t:    button type,
+// $c:    base button color for colored* types
+// $tc:   optional text color for colored* types
+//
+// possible $t values:
+// normal, hover, active, checked-hover, checked-active, insensitive, insensitive-active,
+// backdrop, backdrop-active, backdrop-insensitive, backdrop-insensitive-active,
+// osd, osd-hover, osd-active, osd-insensitive, osd-backdrop, undecorated
+//
+  $_button_shadow: 0 1px 2px transparentize($shadow_color, 0.03);
+
+  @if $t==normal {
+  //
+  // normal button
+  //
+    color: $tc;
+    outline-color: if($c != $_default_button_c, $alt_focus_border_color, $focus_border_color);
+    border-color: if($c!=$_default_button_c, _border_color($c, true), $borders_color); //tint if not default button color
+    background-image: if($variant == 'light', linear-gradient(to top, darken($c, 2%) 2px, $c),
+                                              linear-gradient(to top, darken($c,1%) 2px, $c));
+    @include _shadows($_button_shadow);
+  }
+
+  @else if $t==hover {
+  //
+  // hovered button
+  //
+    color: $tc;
+    border-color: if($c != $_default_button_c, _border_color($c), $borders_color);
+    @if $variant == 'light' {
+      background-image: linear-gradient(to top, darken($c,16%), darken($c,8%) 1px);
+      @include _shadows($_button_shadow);
+    }
+    @else {
+      background-image: linear-gradient(to top, darken($c,4%) 20%, darken($c, 3%) 90%);
+      @include _shadows($_button_shadow);
+    }
+  }
+
+  @else if $t==active {
+  //
+  // pushed button
+  //
+    color: $tc;
+    border-color: if($c != $_default_button_c, _border_color($c), $borders_color);
+    background-image: if($variant == 'light', image(darken($c, 14%)), image(darken($c, 9%)));
+    box-shadow: none;
+  }
+
+  @else if $t==checked-hover {
+  //
+  // pushed togglebutton hover
+  //
+    color: $tc;
+    border-color: if($c != $_default_button_c, _border_color($c), $borders_color);
+    background-image: if($variant == 'light', image(darken($c, 18%)), image(darken($c, 12%)));
+    box-shadow: none;
+  }
+
+  @else if $t==checked-active {
+  //
+  // pushed togglebutton pushed further :)
+  //
+    color: $tc;
+    border-color: if($c != $_default_button_c, _border_color($c), $borders_color);
+    background-image: if($variant == 'light', image(darken($c, 22%)), image(darken($c, 14%)));
+    box-shadow: none;
+  }
+
+  @else if $t==insensitive {
+  //
+  // insensitive button
+  //
+    $_bg: if($c != $_default_button_c, mix($c, $base_color, 85%), $insensitive_bg_color);
+
+    color: if($tc != $fg_color, mix($tc, $_bg, 50%), $insensitive_fg_color);
+    border-color: if($c != $_default_button_c, _border_color($c), $insensitive_borders_color);
+    background-image: image($_bg);
+  }
+
+  @else if $t==insensitive-active {
+  //
+  // insensitive pushed button
+  //
+    $_bg: if($variant == 'light', darken(mix($c, $base_color, 85%), 8%), darken(mix($c, $base_color, 85%), 6%));
+    $_bc: if($c != $_default_button_c, _border_color($c), $insensitive_borders_color);
+
+    color: if($c != $_default_button_c, mix($tc, $_bg, 60%), $insensitive_fg_color);
+    border-color: $_bc;
+    background-image: image($_bg);
+    box-shadow: none;
+  }
+
+  @else if $t==backdrop {
+  //
+  // backdrop button
+  //
+    $_bg: if($c != $_default_button_c, $c, $backdrop_bg_color);
+    $_bc: if($variant == 'light', $c, _border_color($c));
+
+    color: if($tc != $fg_color, mix($tc, $_bg, 80%), $backdrop_fg_color);
+    border-color: if($c != $_default_button_c, $_bc, $backdrop_borders_color);
+    background-image: image($_bg);
+    box-shadow: none;
+  }
+
+  @else if $t==backdrop-active {
+  //
+  // backdrop pushed button
+  //
+    $_bg: if($variant == 'light', darken(mix($c, $base_color, 85%), 8%), darken(mix($c, $base_color, 85%), 4%));
+    $_bc: if($variant == 'light', $_bg ,_border_color($c));
+
+    color: if($tc != $fg_color, mix($tc, $_bg, 80%), $backdrop_fg_color);
+    border-color: if($c != $_default_button_c, $_bc, $backdrop_borders_color);
+    background-image: image($_bg);
+    box-shadow: none;
+  }
+
+  @else if $t==backdrop-insensitive {
+  //
+  // backdrop insensitive button
+  //
+
+    $_bg: if($c != $_default_button_c, mix($c, $base_color, 85%), $insensitive_bg_color);
+    $_bc: if($variant == 'light', $_bg,_border_color($c));
+
+    color: if($c != $_default_button_c, mix($tc, $_bg, 35%), $backdrop_insensitive_color);
+    border-color: if($c != $_default_button_c, $_bc, $backdrop_borders_color);
+    background-image: image($_bg);
+    box-shadow: none;
+  }
+
+  @else if $t==backdrop-insensitive-active {
+  //
+  // backdrop insensitive pushed button
+  //
+
+    $_bg: if($variant == 'light', darken(mix($c, $base_color, 85%), 8%), darken(mix($c, $base_color, 85%), 4%));
+    $_bc: if($variant == 'light', $_bg, _border_color($c));
+
+    color: if($c != $_default_button_c, mix($tc, $_bg, 35%), $backdrop_insensitive_color);
+    border-color: if($c != $_default_button_c, $_bc, $backdrop_borders_color);
+    background-image: image($_bg);
+    box-shadow: none;
+  }
+
+  @else if $t==osd {
+  //
+  // normal osd button
+  //
+    $_bg: if($c != $_default_button_c, transparentize($c, 0.5), $osd_bg_color);
+
+    color: $osd_fg_color;
+    outline-color: if($c != $_default_button_c, $alt_focus_border_color, $focus_border_color);
+    border-color: $osd_borders_color;
+    background-color: transparent;
+    background-image: image($_bg);
+    background-clip: padding-box;
+  }
+
+  @else if $t==osd-hover {
+  //
+  // active osd button
+  //
+    $_bg: if($c != $_default_button_c, transparentize($c, 0.3), darken($osd_bg_color, 10%));
+
+    color: white;
+    border-color: $osd_borders_color;
+    background-color: transparent;
+    background-image: image($_bg);
+    background-clip: padding-box;
+  }
+
+  @else if $t==osd-active {
+  //
+  // active osd button
+  //
+    $_bg: if($c != $_default_button_c, $c, darken($osd_bg_color, 20%));
+
+    color: white;
+    border-color: $osd_borders_color;
+    background-color: transparent;
+    background-image: image($_bg);
+    background-clip: padding-box;
+    box-shadow: none;
+  }
+
+  @else if $t==osd-insensitive {
+  //
+  // insensitive osd button
+  //
+    color: $osd_insensitive_fg_color;
+    border-color: $osd_borders_color;
+    background-color: transparent;
+    background-image: image($osd_insensitive_bg_color);
+    background-clip: padding-box;
+  }
+
+  @else if $t==osd-backdrop {
+  //
+  // backdrop osd button
+  //
+    $_bg: if($c != $_default_button_c, transparentize($c, 0.5), $osd_bg_color);
+
+    color: $osd_fg_color;
+    border-color: $osd_borders_color;
+    background-color: transparent;
+    background-image: image($_bg);
+    background-clip: padding-box;
+  }
+
+  @else if $t==undecorated {
+  //
+  // reset
+  //
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+  }
+  @else if $t==undecorated-hover {
+    border-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    @if $variant == 'light' {
+      background-color: darken($c,14%);
+    } @else {
+      background-color: darken($c,1%);
+    }
+  }
+  @else if $t==undecorated-active {
+    border-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    @if $variant == 'light' {
+      background-color: darken($c,20%);
+    }
+    @else {
+      background-color: darken($c,5%);
+    }
+  }
+}
+
+/***************************
+ * Check and Radio buttons *
+ ***************************/
+
+ @mixin check($t, $c:$checkradio_bg_color, $tc:$checkradio_fg_color, $checked: false) {
+  // Check/Radio drawing function
+  //
+  // $t:        check/radio type,
+  // $c:        base button color for colored* types
+  // $tc:       optional text color for colored* types
+  // $checked:  bool to chose between checked/unchecked
+  //
+  // possible $t values:
+  // normal, hover, active, insensitive, backdrop, backdrop-insensitive, menu
+
+  $_border_color: if($c==$checkradio_bg_color, $checkradio_borders_color, $alt_borders_color);
+  $_dim_border_color: transparentize($_border_color, if($variant == 'light', 0.3, 0.7));
+
+  @if $t==normal  {
+    background-clip: if($checked, border-box, padding-box);
+    background-image: linear-gradient(to bottom, lighten($c, 5%) 20%, $c 90%);
+    border-color: $_border_color;
+    box-shadow: 0 1px transparentize(black, 0.95);
+    color: $tc;
+  }
+
+  @if $t==hover {
+    background-image: if($c == white, image(darken($c, 5%)), linear-gradient(to bottom, lighten($c, 9%) 10%, lighten($c, 4%) 90%));
+  }
+
+  @if $t==active {
+    box-shadow: inset 0 1px if($variant == 'light', rgba(0, 0, 0, 0.2), black);
+    background-image: if($c == white, image(darken($c, 15%)), image(darken($c, 5%)));
+  }
+
+  @if $t==insensitive {
+    box-shadow: none;
+    color: transparentize($tc, 0.3);
+  }
+
+  @if $t==backdrop {
+    background-image: image($c);
+    box-shadow: none;
+    color: $tc;
+  }
+
+  @if $t==backdrop-insensitive {
+    box-shadow: none;
+    color: transparentize($tc, 0.3);
+  }
+
+  @if $t==menu {
+   transform: scale(0.8);
+   border-width: 1.2px;
+   border-color: transparent;
+   box-shadow: none;
+   background-image: image(transparent);
+   color: $tc;
+  }
+
+  @if $t==menu-active {
+   transform: scale(0.8);
+   border-width: 1.2px;
+   color: $tc;
+   box-shadow: none;
+   background-image: image(transparent);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// _common.scss
+
+/* Darken switchbuttons for headerbars. issue #1588 */
+  stackswitcher > button:checked,
+  button.toggle:checked {
+
+    background: if($variant == 'light', image(darken($bg_color, 17%)), image(darken($bg_color, 9%)));
+    border-color: darken($borders_color, 3%);
+    border-top-color: darken($borders_color, 8%);
+    &:backdrop {
+      @include button(backdrop-active);
+    }
+  }
+  
+/*****************
+ * GtkSpinButton *
+ *****************/
+ 
+ //this was inside
+ 
+    > button.image-button.up:not(.flat),
+    > button.image-button.down:not(.flat) {
+      min-height: 16px;
+      margin: 0;
+      padding-bottom: 0;
+      padding-top: 0;
+      color: mix($fg_color, $base_color, 90%);
+      background-image: none;
+      border-style: none none none solid;
+      border-color: transparentize($borders_color, 0.7);
+      border-radius: 0;
+      box-shadow: none;
+      background-color: transparent;
+
+      &:dir(rtl) { border-style: none solid none none; }
+
+      &:hover {
+        color: $fg_color;
+        background-color: darken($bg_color,5%);
+      }
+
+      &:disabled {
+        color: $insensitive_fg_color;
+        background-color: $insensitive_bg_color;
+      }
+
+      &:active {
+        background-color: transparentize(black, 0.9);
+        box-shadow: inset 0 2px 3px -1px transparentize(black, 0.8);
+      }
+
+      &:dir(ltr):last-child { border-radius: 0 $button_radius $button_radius 0; }
+
+      &:dir(rtl):first-child { border-radius: $button_radius 0 0 $button_radius; }
+    }
+    
+    
+// scrollbar {...
+  &.overlay-indicator {
+    &:not(.dragging):not(.hovering) {
+      border-color: transparent;
+      opacity: 0.4;
+      background-color: transparent;
+
+      > range > trough > slider {
+        margin: 0;
+        min-width: 3px;
+        min-height: 3px;
+        background-color: $fg_color;
+        border: 1px solid if($variant == 'light', white, black);
+      }
+
+      &.horizontal {
+        > range > trough > slider {
+          margin: 0 2px;
+          min-width: $_slider_min_length;
+        }
+      }
+
+      &.vertical {
+        > range > trough > slider {
+          margin: 2px 0;
+          min-height: $_slider_min_length;
+        }
+      }
+    }
+
+    &.dragging,
+    &.hovering { opacity: 0.8; }
+  }
+
+
+/**********************
+ * Touch Copy & Paste *
+ *********************/
+//touch selection handlebars for the Popover.osd above
+cursor-handle {
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  border-style: none;
+  min-width: 20px;
+  min-height: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  @each $s,$as in ('',''),
+                  (':hover','-hover'),
+                  (':active','-active') { //no need for insensitive and backdrop
+    &.top#{$s}:dir(ltr), &.bottom#{$s}:dir(rtl) {
+      $_url: '#{$assets}/text-select-start#{$as}#{$asset_suffix}';
+      -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
+                                    url('#{$_url}@2.png'));
+    }
+
+    &.bottom#{$s}:dir(ltr), &.top#{$s}:dir(rtl) {
+      $_url: '#{$assets}/text-select-end#{$as}#{$asset_suffix}';
+      -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
+                                    url('#{$_url}@2.png'));
+    }
+
+    &.insertion-cursor#{$s}:dir(ltr), &.insertion-cursor#{$s}:dir(rtl) {
+      $_url: '#{$assets}/slider-horz-scale-has-marks-above#{$as}#{$asset_suffix}';
+      -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
+                                    url('#{$_url}@2.png'));
+    }
+  }
+}
+
+//inside scale .color
+&.fine-tune {
+      &.horizontal {
+        &:dir(ltr), &:dir(rtl) { // specificity bump
+          padding: 0 0 12px 0;
+
+          > trough {
+            padding-bottom: 7px;
+            background-position: 0 -6px;
+          }
+
+          > trough > slider {
+            margin-bottom: -15px;
+            margin-top: 6px;
+          }
+        }
+      }
+
+      &.vertical {
+        &:dir(ltr) {
+          padding: 0 0 0 12px;
+
+          > trough {
+            padding-left: 7px;
+            background-position: 6px 0;
+          }
+
+          > trough > slider {
+            margin-left: -15px;
+            margin-right: 6px;
+          }
+        }
+
+        &:dir(rtl) {
+          padding: 0 12px 0 0;
+
+          > trough {
+            padding-right: 7px;
+            background-position: -6px 0;
+          }
+
+          > trough > slider {
+            margin-right: -15px;
+            margin-left: 6px;
+          }
+        }
+      }
+    }
