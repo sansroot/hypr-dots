@@ -349,6 +349,12 @@ sed -i "s/wlan0/$interface/" ./themes/themes/misc/black/waybar/config.jsonc &>/d
 sed -i "s/wlan0/$interface/" ./themes/themes/misc/anonymous/waybar/config.jsonc &>/dev/null
 sed -i "s/wlan0/$interface/" ./themes/themes/misc/anonymous-green/waybar/config.jsonc &>/dev/null
 
+
+
+
+
+
+
 clear
 cp -r ./fastfetch ./hypr ./kitty ./rofi ./waybar -t ~/.config
 cp -r ./themes -t ~/Documents/
@@ -364,17 +370,17 @@ waybar &> /dev/null &
 cd ..
 rm -rf hypr-dots
 
-hyprctl setcursor hypr-dots-red 24
+hyprctl setcursor hypr-dots-anonymous 24
 
 sudo chmod -R 777 /usr/share/themes
 sudo chmod -R 777 /usr/share/icons
 sudo chmod -R 777 /usr/bin/papirus-folders
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark' &> /dev/null
-gsettings set org.gnome.desktop.interface gtk-theme "hypr-dots-red" &> /dev/null
+gsettings set org.gnome.desktop.interface gtk-theme "hypr-dots-anonymous-green" &> /dev/null
 
-gsettings set org.gnome.desktop.interface cursor-theme 'hypr-dots-red' &> /dev/null
+gsettings set org.gnome.desktop.interface cursor-theme 'hypr-dots-anonymous' &> /dev/null
 
-papirus-folders -C cat-mocha-red &> /dev/null
+papirus-folders -C black &> /dev/null
 
 clear
 echo "Now, let's load the Hyprland, Waybar, and Rofi themes into the theme-switcher variable for the first time."

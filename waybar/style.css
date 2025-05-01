@@ -16,16 +16,16 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #f38ba8;
+    background: #00210d; 
+    color: #00FF66;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
+    border-color: #00FF66;
     transition: 0.3s;
 }
 #network:hover { 
-    color: #1E1D2F;
-    background: #f38ba8;
+    color: #00210d;
+    background: #00FF66;
 }
 #custom-keybinds {
     margin-top: 10px;
@@ -35,16 +35,16 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    color: #f38ba8;
-    background: #1E1D2F;
+    color: #00FF66;
+    background: #00210d;
     transition: 0.3s;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
+    border-color: #00FF66;
 }
 #custom-keybinds:hover { 
-    background: #f38ba8;
-    color: #1E1D2F;
+    background: #00FF66;
+    color: #00210d;
 }
 #cava{
     margin-top: 10px;
@@ -54,16 +54,16 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #f38ba8;
+    background: #00210d; 
+    color: #00FF66;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
+    border-color: #00FF66;
     transition: 0.3s; 
 }
 #cava:hover{
-    color: #1E1D2F;
-    background: #f38ba8;
+    color: #00210d;
+    background: #00FF66;
 }
 #battery{
     margin-top: 10px;
@@ -73,20 +73,20 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #f38ba8;
+    background: #00210d; 
+    color: #00FF66;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
+    border-color: #00FF66;
     transition: 0.3s; 
 }
 #battery:hover{
-    color: #1E1D2F;
-    background: #f38ba8;
+    color: #00210d;
+    background: #00FF66;
 }
 #backlight:hover{
-    color: #1E1D2F;
-    background: #f38ba8;
+    color: #00210d;
+    background: #00FF66;
 }
 #backlight{
     margin-top: 10px;
@@ -96,13 +96,15 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #f38ba8;
+    background: #00210d; 
+    color: #00FF66;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
+    border-color: #00FF66;
     transition: 0.3s; 
 }
+
+
 #language{
     margin-top: 10px;
     margin-left: 8px;
@@ -111,16 +113,16 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #f38ba8;
+    background: #00210d; 
+    color: #00FF66;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
+    border-color: #00FF66;
     transition: 0.3s;
 }
 #language:hover{
-    color: #1E1D2F; 
-    background: #f38ba8; 
+    color: #00210d; 
+    background: #00FF66; 
 }
 #pulseaudio {
     margin-top: 10px;
@@ -130,21 +132,21 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #f38ba8;
+    background: #00210d; 
+    color: #00FF66;
     padding: 8px;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
+    border-color: #00FF66;
     transition: 0.3s;
 }
 #pulseaudio:hover{ 
-    background: #f38ba8;
-    color: #1E1D2F;
+    background: #00FF66;
+    color: #00210d;
 }
 #pulseaudio.muted {
     color: #f38ba8;
-    background: #1E1D2F; 
+    background: #00210d; 
     border-bottom: 3px;
     border-style: solid;
     border-color: #f38ba8;
@@ -152,7 +154,7 @@ window#waybar {
 }
 #pulseaudio.muted:hover {
     background: #f38ba8;
-    color: #1E1D2F; 
+    color: #00210d; 
 
 }
 #clock {
@@ -163,16 +165,16 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #f38ba8;
+    background: #00210d; 
+    color: #00FF66;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
+    border-color: #00FF66;
     transition: 0.3s;
 }
 #clock:hover {
-    color: #1E1D2F; 
-    background: #f38ba8;
+    color: #00210d; 
+    background: #00FF66;
 }
 #disk{
     margin-top: 10px;
@@ -182,16 +184,16 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #f38ba8;
+    background: #00210d; 
+    color: #00FF66;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
+    border-color: #00FF66;
     transition: 0.3s;
 }
 #disk:hover{
-    color: #1E1D2F; 
-    background: #f38ba8;
+    color: #00210d; 
+    background: #00FF66;
 }
 #privacy{
     margin-top: 10px;
@@ -201,11 +203,11 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #f38ba8;
+    background: #00210d; 
+    color: #00FF66;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
+    border-color: #00FF66;
     transition: 0.3s;
 }
 #idle_inhibitor{
@@ -216,28 +218,28 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #f38ba8;
+    background: #00210d; 
+    color: #00FF66;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
+    border-color: #00FF66;
     transition: 0.3s;
 }
 #idle_inhibitor.activated{
-    color: #89b4fa;
-    border-color: #89b4fa;
+    color: #00FF66;
+    border-color: #00FF66;
 }
 #idle_inhibitor.activated:hover{
-    background: #89b4fa;
-    color: #1E1D2F;
-    border-color: #89b4fa;
+    background: #00FF66;
+    color: #00210d;
+    border-color: #00FF66;
 }
 #idle_inhibitor.deactivated{
-    color: #f38ba8
+    color: #00FF66
 }
 #idle_inhibitor.deactivated:hover{
-    color: #1E1D2F; 
-    background: #f38ba8;
+    color: #00210d; 
+    background: #00FF66;
 }
 #memory {
     margin-top: 10px;
@@ -247,16 +249,16 @@ window#waybar {
     padding-right: 10px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #f38ba8;
+    background: #00210d; 
+    color: #00FF66;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
+    border-color: #00FF66;
     transition: 0.3s;
 }
 #memory:hover { 
-    color: #1E1D2F; 
-    background: #f38ba8;
+    color: #00210d; 
+    background: #00FF66;
 
 }
 #cpu {
@@ -267,16 +269,16 @@ window#waybar {
     padding-right: 10px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #f38ba8;
+    background: #00210d; 
+    color: #00FF66;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
+    border-color: #00FF66;
     transition: 0.3s;
 }
 #cpu:hover {
-    color: #1E1D2F; 
-    background: #f38ba8;
+    color: #00210d; 
+    background: #00FF66;
 
 }
 #custom-launcher {
@@ -287,27 +289,27 @@ window#waybar {
     padding-right: 5px;
     border-radius: 10px;
     transition: none;
-    color: #f38ba8;
-    background: #1E1D2F;
+    color: #00FF66;
+    background: #00210d;
     transition: 0.3s;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
+    border-color: #00FF66;
 }
 #custom-launcher:hover { 
-    background: #f38ba8;
-    color: #1E1D2F;
+    background: #00FF66;
+    color: #00210d;
 }
 #network.disconnected {
     color: #f38ba8;
-    background: #1E1D2F; 
+    background: #00210d; 
     border-bottom: 3px;
     border-style: solid;
     border-color: #f38ba8;
 }
 #network.disconnected:hover {
     background: #f38ba8;
-    color: #1E1D2F; 
+    color: #00210d; 
 }
 #custom-power {
     font-size: 15px;
@@ -319,17 +321,17 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #f38ba8;
+    background: #00210d; 
+    color: #00FF66;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
+    border-color: #00FF66;
     transition: 0.3s;
 }
 #custom-power:hover {
 
     background: #f38ba8;
-    color: #1E1D2F;
+    color: #00210d;
     border-color: #f38ba8;
 
 }
@@ -337,15 +339,15 @@ window#waybar {
     margin-top: 10px;
     margin-left: 8px;
     padding-right: 4px;
-    background: #1E1D2F; 
+    background: #00210d; 
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
-    color: #f38ba8;
+    border-color: #00FF66;
+    color: #00FF66;
     transition: 0.3s;
 }
 #workspaces button {
-    color: #f38ba8;
+    color: #00FF66;
     transition: 0.3s;
 }
 #workspaces button:hover {
@@ -360,11 +362,11 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #f38ba8;
+    background: #00210d; 
+    color: #00FF66;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
+    border-color: #00FF66;
     transition: 0.3s;
 }
 #tray menu{
@@ -375,10 +377,10 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #f38ba8;
+    background: #00210d; 
+    color: #00FF66;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
+    border-color: #00FF66;
     transition: 0.3s;
 }
