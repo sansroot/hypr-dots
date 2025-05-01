@@ -163,7 +163,8 @@ sudo pacman -S keyd
 | Move window to workspace 9            | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>4</kbd> |
 | Move window to workspace 10           | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>5</kbd> |
 
-![optimize](https://github.com/user-attachments/assets/0e670e2a-6baf-4e50-aabb-2b9ac5f90e21)
+![optimize](https://github.com/user-attachments/assets/ee15d185-9ba2-4eb3-b777-5092aa7617d4)
+
 
 </details>
 
