@@ -1,0 +1,90 @@
+  //this used to be in _common.scss. I've left there the warning to locate where it used to be. This code is now unused.
+  
+  /*
+  // *WARNING* scale with marks madness following
+
+  // FIXME: OSD and selected list rows missing, I don't feel like adding the other 144 assets needed for those...
+  $suffix: if($variant == 'light', '', '-dark');
+
+  @each $dir_class, $dir_infix in ('horizontal', 'horz'),
+                                  ('vertical', 'vert') {
+    @each $marks_infix, $marks_class in ('scale-has-marks-above', 'marks-before:not(.marks-after)'),
+                                        ('scale-has-marks-below', 'marks-after:not(.marks-before)') {
+      @each $state, $state_infix in ('', ''),
+                                    (':hover', '-hover'),
+                                    (':active', '-active'),
+                                    (':disabled', '-insensitive'),
+                                    (':backdrop', '-backdrop'),
+                                    (':backdrop:disabled', '-backdrop-insensitive') {
+        &.#{$dir_class}.#{$marks_class} {
+
+          slider {
+            &#{$state} {
+              // an asymmetric slider asset is used here, so the margins are uneven, the smaller
+              // margin is set on the point side.
+              margin: -10px;
+              $_scale_asset: 'assets/slider-#{$dir_infix}-#{$marks_infix}#{$state_infix}#{$suffix}';
+              border-style: none;
+              border-radius: 0;
+
+              background-color: transparent;
+              background-image: -gtk-scaled(url('#{$_scale_asset}.png'), url('#{$_scale_asset}@2.png'));
+
+              $_scale_slider_bg_pos: bottom;
+
+              @if $dir_class == 'horizontal' {
+                min-height: 26px;
+                min-width: 22px;
+
+                @if $marks_infix == 'scale-has-marks-above' {
+                  margin-top: -14px;
+
+                  $_scale_slider_bg_pos: top;
+                }
+
+                @else { margin-bottom: -14px; }
+              }
+
+              @else {
+                min-height: 22px;
+                min-width: 26px;
+
+                @if $marks_infix == 'scale-has-marks-above' {
+                  margin-left: -14px;
+
+                  $_scale_slider_bg_pos: left bottom;
+                }
+
+                @else {
+                  margin-right: -14px;
+
+                  $_scale_slider_bg_pos: right bottom;
+                }
+              }
+
+              background-position: $_scale_slider_bg_pos;
+              background-repeat: no-repeat;
+              box-shadow: none;
+            }
+          }
+
+          &.fine-tune slider {
+            // bigger negative margins to make the trough grow here as well
+            margin: -7px;
+
+            @if $dir_class == 'horizontal' {
+              @if $marks_infix == 'scale-has-marks-above' { margin-top: -11px; }
+
+              @else { margin-bottom: -11px; }
+            }
+
+            @else {
+              @if $marks_infix == 'scale-has-marks-above' { margin-left: -11px; }
+
+              @else { margin-right: -11px; }
+            }
+          }
+        }
+      }
+    }
+  }*/

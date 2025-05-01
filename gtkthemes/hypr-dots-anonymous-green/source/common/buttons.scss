@@ -1,0 +1,198 @@
+//auxiliary functions for buttons first
+
+$_default_button_c: $button_bg;
+
+@mixin _button_text_shadow ($tc:$fg_color, $bg:$bg_color) {
+//
+// helper function for the text emboss effect
+//
+// $tc is the optional text color, not the shadow color
+//
+// TODO: this functions needs a way to deal with special cases
+//
+
+  $_shadow: _text_shadow_color($tc, $bg);
+
+  @if lightness($tc)<50% {
+    text-shadow: 0 1px _button_hilight_color($tc);//$_shadow;
+    -gtk-icon-shadow: 0 1px _button_hilight_color($tc);//$_shadow;
+  }
+  @else {
+    text-shadow: 0 -1px $_shadow;
+    -gtk-icon-shadow: 0 -1px $_shadow;
+  }
+}
+
+
+
+
+
+@mixin button($t, $c:$button_bg, $tc:$button_fg, $edge: none, $backimage: null) {
+
+	//
+	// Button drawing function
+	//
+	// $t:    button type,
+	// $c:    base button color for colored* types
+	// $tc:   optional text color for colored* types
+	// $edge: set to none to not draw the bottom edge or specify a color to not
+	//        use the default one
+	// $backimage: additional background-image behind the default one
+	//             (for the button.circular hack)
+	//
+	// possible $t values (gtk3):
+	// normal, hover, active, insensitive, insensitive-active,
+	// backdrop, backdrop-active, backdrop-insensitive, backdrop-insensitive-active,
+	// osd, osd-hover, osd-active, osd-insensitive, osd-backdrop, undecorated
+	
+	// possible $t values (gtk4):
+	// normal, hover, active, checked-hover, checked-active, insensitive, insensitive-active,
+	// backdrop, backdrop-active, backdrop-insensitive, backdrop-insensitive-active,
+	// osd, osd-hover, osd-active, osd-insensitive, osd-backdrop, undecorated
+
+	// this mixin needs to cover both gtk3 and gtk4 cases in order to work.
+	// gtk4 mixin calls only include $t, $c and $tc, therefore it should be safe to use in both.
+
+	
+  	$_hilight_color: _button_hilight_color($c);
+	$_button_edge: if($edge == none, none, _widget_edge($edge));
+	$_blank_edge: if($edge == none, none, _widget_edge(transparentize($edge,1)));
+	$_button_shadow: 0 1px 2px transparentize($shadow_hard_color, 0.6);
+	
+	$button_clickable_image: image_gloss_well_contrasted($c);
+	
+	//remove borders on all buttons...
+	//border-width: 0;
+	
+	@if $t==normal or $t==normal-alt  {
+	//
+	// normal button
+	//
+	
+	color: $tc;
+	background-color: $c;
+	border-color: transparent; //mix($tc, $c, 10%);
+	outline-color: $focus_border_color;
+	//background-image: none;// $button_clickable_image, $backimage;
+	//@include _button_text_shadow($tc, $c);
+    @include _shadows(shadow(normal));
+    
+	}
+	@else if $t==hover or $t==hover-alt or $t==undecorated-hover or $t==osd-hover {
+	//
+	// hovered button
+	//
+		border-color: currentColor; //gtkalpha($button_checked_fg, 1);
+	}
+
+	
+  	
+  	@else if $t==active or $t==osd-active {
+	  //
+	  // pushed button
+	  //
+	  //color: $button_checked_fg;
+	  //background-color: $button_checked_bg;
+	  //@include _shadows(shadow(glow, $selected_bg_color));
+	  background-size: 500% 500%;
+	  transition: background-size 0;
+	  //transition: 50ms;
+	}
+	
+	@else if ($t==checked-active ) {
+	  //
+	  // pushed and toggled button
+	  //
+	  color: $button_checked_fg;
+	  background-color: $button_checked_bg;
+	  @include _shadows(shadow(normal));
+	
+	}
+
+	@else if ($t==checked ) {
+		//
+		// toggled button
+		//
+		color: $button_checked_fg;
+		background-color: $button_checked_bg;
+		border-color: transparent; //mix($button_checked_fg, $button_checked_bg, 10%);
+		@include _shadows(shadow(normal));
+	  
+	  }
+	
+	@else if ($t==checked-hover) {
+	  //
+	  // toggled button and hover
+	  //
+	  color: $button_checked_fg;
+	  border-color: gtkalpha($button_checked_fg, 0.5);
+	   @include _shadows(shadow(normal));
+	
+	}
+
+	
+	 @else if $t==insensitive or $t==osd-insensitive or $t==disabled {
+  //
+  // insensitive button
+  //
+  		color: $insensitive_fg_color;
+  		border-color: transparent; //mix($insensitive_fg_color, $insensitive_bg_color, 10%);
+  		background-color: $insensitive_bg_color;
+  		background-image: if($backimage==null, none, $backimage);
+		text-shadow: none;
+		-gtk-icon-shadow: none;
+		@include _shadows(shadow(insensitive));
+
+  	}
+  	@else if $t==insensitive-active {
+  	  //
+ 	 // insensitive pushed button
+  	//
+  		color: $insensitive_fg_color;
+  		background-color: mix($insensitive_bg_color, $button_checked_bg, 80%);
+		border-color: transparent;//mix($insensitive_fg_color, $insensitive_bg_color, 50%);
+		text-shadow: none;
+		-gtk-icon-shadow: none;
+		@include _shadows(shadow(insensitive));
+  	}
+  	
+  	@else if $t==backdrop  {
+	  //
+	  // backdrop button
+	  //
+	  background-image: if($backimage==null, none, $backimage);
+	  }
+	@else if $t==backdrop-active {
+  //
+  // backdrop pushed button
+  //
+  }
+  @else if $t==backdrop-insensitive {
+  //
+  // backdrop insensitive button
+  //
+  }
+  
+  @else if $t==backdrop-insensitive-active {
+  //
+  // backdrop insensitive pushed button
+  //
+  }
+  
+  //TODO: what happens with OSDs? Is it necessary to redefine them?
+  
+  @else if $t==undecorated {
+  //
+  // reset
+  //
+    border-color: transparent;
+    background-color: transparent;
+    //background-image: none; //disabled because we need the image for activated (pushed) animation
+
+    @include _shadows(inset 0 1px transparentize(white, 1), $_blank_edge);
+
+    text-shadow: none;
+    -gtk-icon-shadow: none;
+  }
+  
+}
