@@ -164,7 +164,8 @@ sudo pacman -S keyd
 | Move window to workspace 10           | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>5</kbd> |
 
 
-![optimize](https://github.com/user-attachments/assets/5046b384-f4c9-48dd-8914-f3e26a3df07a)
+
+![novo opt](https://github.com/user-attachments/assets/27bf2e4b-e44b-4bb1-b086-17bba7a76726)
 
 
 </details>
