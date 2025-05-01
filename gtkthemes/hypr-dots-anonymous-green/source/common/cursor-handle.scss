@@ -1,0 +1,26 @@
+/**********************
+ * Touch Copy & Paste *
+ *********************/
+//touch selection handlebars for the Popover.osd above
+cursor-handle {
+	
+	//copying slider code, so not DRYing, here...	
+	//I don't know how to test this...
+	@include button(normal-alt);
+
+    border: 1px solid darken($alt_borders_color, 3%);
+    border-radius: 100%;
+    transition: $button_transition;
+    transition-property: background, border, box-shadow;
+    min-height: 18px;
+    min-width: 10px;
+
+    &:hover { @include button(hover-alt, $edge: $shadow_color); }
+
+    &:active { border-color: $progress_border_color; }
+
+    &:disabled { @include button(insensitive); }
+    
+    &.top:dir(ltr), &.bottom:dir(rtl) {border-radius: 100% 5px 5px 5px;}
+    &.bottom:dir(ltr), &.top:dir(rtl) {border-radius: 5px 100% 5px 5px;}
+}

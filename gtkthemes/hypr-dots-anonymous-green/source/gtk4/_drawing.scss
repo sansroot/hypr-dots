@@ -1,0 +1,142 @@
+// Drawing mixins
+
+// generic drawing of more complex things
+
+//
+// Helper mixin for drawing visible focus rings
+//
+// If $target is specified, the focus ring is applied to the specified child element.
+// If $outer is true, the focus ring extends outward. Otherwise, it extends inward.
+// If $within is true, use focus-within instead of focus:focus-visible
+//
+
+//to allow some common mixins to know whether they've been called for a gtk3 or gtk4 widget, because there are some things that are different.
+$gtk: 4;
+
+
+@mixin focus-ring($target: null, $width: 2px, $offset: -$width, $outer: false, $focus-state: 'focus:focus-visible', $fc: $focus_border_color) {
+  transition-property: outline, outline-width, outline-offset, outline-color;
+  transition-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  & #{$target} {
+    outline: 0 solid transparent;
+    outline-offset: if($outer, $offset + 4px, $offset + $width + 4px);
+  }
+
+  &:#{$focus-state} #{$target} {
+    outline-color: $fc;
+    outline-width: $width;
+    outline-offset: $offset;
+  }
+}
+
+@mixin _shadows($list...) {
+//
+// Helper mixin to stack up to box-shadows;
+//
+  $shadows: null;
+
+  @each $shadow in $list {
+    @if $shadow!=none { $shadows: $shadows, $shadow; }
+  }
+
+  box-shadow: $shadows;
+}
+
+// entries
+
+@mixin entry($t, $fc:$focus_border_color) {
+//
+// Entries drawing function
+//
+// $t: entry type
+// $fc: focus color
+//
+// possible $t values:
+// normal, focus, insensitive, backdrop, backdrop-insensitive, osd, osd-focus, osd-backdrop, block_cursor;
+//
+  $_entry_shadow: 0 1px 2px transparentize($shadow_hard_color, 0.6);
+  $_hilight_color: _button_hilight_color($bg_color);
+  
+  @if $t==normal {
+    color: $text_color;
+    border-color: mix($text_color,$base_color, 20%);//$borders_color;
+    background-color: $base_color;
+    @include _shadows(inset shadow(normal), inset shadow(transparent));
+    // for the transition to work the number of shadows in different states needs to match, hence the transparent shadow here.
+  }
+  
+  @if t==hover { //gtk apparently does not create :hover on entries!?!
+    border-color: gtkalpha($fc, 0.5);
+  }
+
+  @if $t==focus {
+    @include _shadows(inset shadow(normal), inset shadow(glow-small, $fc));
+    //border-color: entry_focus_border($fc);
+  }
+
+  @if $t==insensitive {
+    color: $insensitive_fg_color;
+    border-color: mix($insensitive_fg_color, $insensitive_bg_color, 50%);
+    background-color: $insensitive_bg_color;
+  }
+  @if $t==backdrop {
+    color: $backdrop_text_color;
+    border-color: $backdrop_borders_color;
+    background-color: $backdrop_base_color;
+  }
+  @if $t==backdrop-insensitive {
+    color: $backdrop_insensitive_color;
+    border-color: mix($backdrop_insensitive_color, $insensitive_bg_color, 50%);
+    background-color: $insensitive_bg_color;
+  }
+  @if $t==osd {
+    color: $osd_text_color;
+    border-color: $osd_borders_color;
+    background-color: transparentize(opacify($osd_borders_color, 1), 0.5);
+    background-clip: padding-box;
+    @include _shadows(inset $_entry_shadow, 0 1px $_hilight_color);
+    -gtk-icon-shadow: 0 1px black;
+  }
+  @if $t==osd-focus {
+    color: $osd_text_color;
+    border-color: $selected_bg_color;
+    background-color: transparentize(opacify($osd_borders_color, 1), 0.5);
+    background-clip: padding-box;
+    @include _shadows(inset $_entry_shadow, 0 1px $_hilight_color);
+  }
+  @if $t==osd-insensitive {
+    color: $osd_insensitive_fg_color;
+    border-color: $osd_borders_color;
+    background-color: $osd_insensitive_bg_color;
+    background-clip: padding-box;
+  }
+  @if $t==osd-backdrop {
+    color: $osd_text_color;
+    border-color: $osd_borders_color;
+    background-color: transparentize(opacify($osd_borders_color, 1), 0.5);
+    background-clip: padding-box;
+  }
+  @if $t==block_cursor {
+    color: $base_color;
+    background-color: $text_color;
+  }
+}
+
+// buttons
+
+
+@import "../common/buttons.scss";
+
+
+
+
+
+@import '../common/overshoot.scss';
+
+
+/***************************
+ * Check and Radio buttons *
+ ***************************/
+
+@import "../common/checkradios.scss";
