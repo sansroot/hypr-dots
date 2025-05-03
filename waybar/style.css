@@ -16,16 +16,16 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #a6e3a1;
+    background: #32111C; 
+    color: #FEE5E4;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #a6e3a1;
+    border-color: #EF3946;
     transition: 0.3s;
 }
 #network:hover { 
-    color: #1E1D2F;
-    background: #a6e3a1;
+    color: #32111C;
+    background: #EF3946;
 }
 #custom-keybinds {
     margin-top: 10px;
@@ -35,16 +35,16 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    color: #a6e3a1;
-    background: #1E1D2F;
+    color: #FEE5E4;
+    background: #32111C;
     transition: 0.3s;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #a6e3a1;
+    border-color: #EF3946;
 }
 #custom-keybinds:hover { 
-    background: #a6e3a1;
-    color: #1E1D2F;
+    background: #EF3946;
+    color: #32111C;
 }
 #cava{
     margin-top: 10px;
@@ -54,16 +54,16 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #a6e3a1;
+    background: #32111C; 
+    color: #FEE5E4;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #a6e3a1;
+    border-color: #EF3946;
     transition: 0.3s; 
 }
 #cava:hover{
-    color: #1E1D2F;
-    background: #a6e3a1;
+    color: #32111C;
+    background: #EF3946;
 }
 #battery{
     margin-top: 10px;
@@ -73,20 +73,20 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #a6e3a1;
+    background: #32111C; 
+    color: #FEE5E4;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #a6e3a1;
+    border-color: #EF3946;
     transition: 0.3s; 
 }
 #battery:hover{
-    color: #1E1D2F;
-    background: #a6e3a1;
+    color: #32111C;
+    background: #EF3946;
 }
 #backlight:hover{
-    color: #1E1D2F;
-    background: #a6e3a1;
+    color: #32111C;
+    background: #EF3946;
 }
 #backlight{
     margin-top: 10px;
@@ -96,13 +96,14 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #a6e3a1;
+    background: #32111C; 
+    color: #FEE5E4;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #a6e3a1;
+    border-color: #EF3946;
     transition: 0.3s; 
 }
+
 
 #language{
     margin-top: 10px;
@@ -112,16 +113,16 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #a6e3a1;
+    background: #32111C; 
+    color: #FEE5E4;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #a6e3a1;
+    border-color: #EF3946;
     transition: 0.3s;
 }
 #language:hover{
-    color: #1E1D2F; 
-    background: #a6e3a1; 
+    color: #32111C; 
+    background: #EF3946; 
 }
 #pulseaudio {
     margin-top: 10px;
@@ -131,29 +132,29 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #a6e3a1;
+    background: #32111C; 
+    color: #FEE5E4;
     padding: 8px;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #a6e3a1;
+    border-color: #EF3946;
     transition: 0.3s;
 }
 #pulseaudio:hover{ 
-    background: #a6e3a1;
-    color: #1E1D2F;
+    background: #EF3946;
+    color: #32111C;
 }
 #pulseaudio.muted {
-    color: #f38ba8;
-    background: #1E1D2F; 
+    color: #FEE5E4;
+    background: #32111C; 
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
+    border-color: #EF3946;
     transition: 0.3s;
 }
 #pulseaudio.muted:hover {
-    background: #f38ba8;
-    color: #1E1D2F; 
+    background: #EF3946;
+    color: #32111C; 
 
 }
 #clock {
@@ -164,16 +165,16 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #a6e3a1;
+    background: #32111C; 
+    color: #FEE5E4;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #a6e3a1;
+    border-color: #EF3946;
     transition: 0.3s;
 }
 #clock:hover {
-    color: #1E1D2F; 
-    background: #a6e3a1;
+    color: #32111C; 
+    background: #EF3946;
 }
 #disk{
     margin-top: 10px;
@@ -183,16 +184,16 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #a6e3a1;
+    background: #32111C; 
+    color: #FEE5E4;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #a6e3a1;
+    border-color: #EF3946;
     transition: 0.3s;
 }
 #disk:hover{
-    color: #1E1D2F; 
-    background: #a6e3a1;
+    color: #32111C; 
+    background: #EF3946;
 }
 #privacy{
     margin-top: 10px;
@@ -202,11 +203,11 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #a6e3a1;
+    background: #32111C; 
+    color: #FEE5E4;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #a6e3a1;
+    border-color: #EF3946;
     transition: 0.3s;
 }
 #idle_inhibitor{
@@ -217,28 +218,28 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #a6e3a1;
+    background: #32111C; 
+    color: #FEE5E4;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #a6e3a1;
+    border-color: #EF3946;
     transition: 0.3s;
 }
 #idle_inhibitor.activated{
-    color: #89b4fa;
-    border-color: #89b4fa;
+    color: #FEE5E4;
+    border-color: #EF3946;
 }
 #idle_inhibitor.activated:hover{
-    background: #89b4fa;
-    color: #1E1D2F;
-    border-color: #89b4fa;
+    background: #EF3946;
+    color: #32111C;
+    border-color: #EF3946;
 }
 #idle_inhibitor.deactivated{
-    color: #a6e3a1
+    color: #FEE5E4
 }
 #idle_inhibitor.deactivated:hover{
-    color: #1E1D2F; 
-    background: #a6e3a1;
+    color: #32111C; 
+    background: #EF3946;
 }
 #memory {
     margin-top: 10px;
@@ -248,16 +249,16 @@ window#waybar {
     padding-right: 10px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #a6e3a1;
+    background: #32111C; 
+    color: #FEE5E4;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #a6e3a1;
+    border-color: #EF3946;
     transition: 0.3s;
 }
 #memory:hover { 
-    color: #1E1D2F; 
-    background: #a6e3a1;
+    color: #32111C; 
+    background: #EF3946;
 
 }
 #cpu {
@@ -268,16 +269,16 @@ window#waybar {
     padding-right: 10px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #a6e3a1;
+    background: #32111C; 
+    color: #FEE5E4;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #a6e3a1;
+    border-color: #EF3946;
     transition: 0.3s;
 }
 #cpu:hover {
-    color: #1E1D2F; 
-    background: #a6e3a1;
+    color: #32111C; 
+    background: #EF3946;
 
 }
 #custom-launcher {
@@ -288,27 +289,27 @@ window#waybar {
     padding-right: 5px;
     border-radius: 10px;
     transition: none;
-    color: #a6e3a1;
-    background: #1E1D2F;
+    color: #FEE5E4;
+    background: #32111C;
     transition: 0.3s;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #a6e3a1;
+    border-color: #EF3946;
 }
 #custom-launcher:hover { 
-    background: #a6e3a1;
-    color: #1E1D2F;
+    background: #EF3946;
+    color: #32111C;
 }
 #network.disconnected {
-    color: #f38ba8;
-    background: #1E1D2F; 
+    color: #FEE5E4;
+    background: #32111C; 
     border-bottom: 3px;
     border-style: solid;
-    border-color: #f38ba8;
+    border-color: #EF3946;
 }
 #network.disconnected:hover {
-    background: #f38ba8;
-    color: #1E1D2F; 
+    background: #EF3946;
+    color: #32111C; 
 }
 #custom-power {
     font-size: 15px;
@@ -320,38 +321,40 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #a6e3a1;
+    background: #32111C; 
+    color: #FEE5E4;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #a6e3a1;
+    border-color: #EF3946;
     transition: 0.3s;
 }
 #custom-power:hover {
-
-    background: #f38ba8;
-    color: #1E1D2F;
-    border-color: #f38ba8;
+    background: #EF3946;
+    color: #32111C;
+    border-color: #EF3946;
 
 }
 #workspaces {
     margin-top: 10px;
     margin-left: 8px;
     padding-right: 4px;
-    background: #1E1D2F; 
+    background: #32111C; 
     border-bottom: 3px;
     border-style: solid;
-    border-color: #a6e3a1;
-    color: #a6e3a1;
+    border-color: #EF3946;
+    color: #FEE5E4;
     transition: 0.3s;
 }
+
 #workspaces button {
-    color: #a6e3a1;
+    color: #FEE5E4;
     transition: 0.3s;
 }
 #workspaces button:hover {
     background: transparent;
     color: transparent;
+    box-shadow: none;
+    text-shadow: none;
 }
 #tray{
     margin-top: 10px;
@@ -361,11 +364,11 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #a6e3a1;
+    background: #32111C; 
+    color: #FEE5E4;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #a6e3a1;
+    border-color: #EF3946;
     transition: 0.3s;
 }
 #tray menu{
@@ -376,10 +379,10 @@ window#waybar {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    background: #1E1D2F; 
-    color: #a6e3a1;
+    background: #32111C; 
+    color: #FEE5E4;
     border-bottom: 3px;
     border-style: solid;
-    border-color: #a6e3a1;
+    border-color: #EF3946;
     transition: 0.3s;
 }

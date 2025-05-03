@@ -8,7 +8,7 @@
 
 {
     "logo": {
-    	"source": "~/.config/fastfetch/green2.jpg",
+    	"source": "~/.config/fastfetch/redanon2.png",
     	"type": "kitty",
     	"height": 16,
     	"padding": {
@@ -80,11 +80,6 @@
             "type": "datetime",
             "format": "{1}-{3}-{11}",
             "key": " ",
-            "keyColor": "34", 
-        },
-        {
-            "type": "media",
-            "key": "󰝚 ",
             "keyColor": "34", 
         },
 
