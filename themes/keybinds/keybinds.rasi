@@ -2,7 +2,7 @@
     width: 600;
     font: "JetBrainsMono Nerd Font 14";
 }
-@import                          "./colors.rasi"
+@import                          "~/.config/rofi/colors.rasi"
 element-text, element-icon, mode-switcher {
     background-color: inherit;
     text-color: inherit;
@@ -64,7 +64,7 @@ listview {
     border: 0px;
     padding: 4px 0px 13px;
     margin: 0px 0px 0px 20px;
-    columns: 2;
+    columns: 1;
     background-color: @background;
     fixed-height: false;
     lines: 7;
