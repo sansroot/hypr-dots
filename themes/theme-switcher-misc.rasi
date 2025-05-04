@@ -106,7 +106,7 @@ error-message {
 listview {
     enabled:                     true;
     columns:                     1000;
-    lines:                       2;
+    lines:                       3;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
