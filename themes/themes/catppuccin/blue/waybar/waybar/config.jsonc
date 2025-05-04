@@ -2,7 +2,7 @@
 	"layer": "top",
 	"modules-left": ["custom/launcher","cpu","memory","disk","hyprland/workspaces"],
 	"modules-center": ["clock"],
-	"modules-right": ["custom/keybinds","tray","cava","hyprland/language","backlight","pulseaudio","battery","custom/power"],
+	"modules-right": ["custom/keybinds","tray", "cava", "hyprland/language","backlight","pulseaudio","battery","custom/power"],
 	
 	"pulseaudio": {
 		"tooltip": false,
@@ -44,7 +44,7 @@
         "format": "{icon}  {percent}%",
         "format-icons": ["", ""]
     },
-    "battery": {
+        "battery": {
         "bat": "BAT0",
         "interval": 60,
         "states": {
@@ -55,10 +55,7 @@
         "format-icons": ["", "", "", "", ""],
         "max-length": 25
     },
-    "tray": {
-        "icon-size": 18,
-        "spacing": 10
-    },
+
     "disk": {
         "interval": 30,
         "format": "  {percentage_used}%",
@@ -87,6 +84,8 @@
             }
         ]
     },
+
+
     "hyprland/language": {
         "format": "  {1}",
         "tooltip": false,
@@ -130,5 +129,17 @@
             "active": "",
             "default": ""
     },
+    "tray": {
+    "icon-size": 21,
+    "spacing": 10
+}
     },
+    "network": {
+        "interface": "wlan0",
+        "format-wifi": "󰘊 {essid}({signalStrength}%)",
+        "format-ethernet": "  {ipaddr}/{cidr}",
+        "format-disconnected": "disconnected",
+        "tooltip": false,
+        "max-length": 50,
+    }
 }
