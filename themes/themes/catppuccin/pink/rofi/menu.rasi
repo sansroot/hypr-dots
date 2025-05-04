@@ -51,20 +51,20 @@ textbox-prompt-colon {
 }
 
 entry {
-    padding: 0px 5px 8px 5px;  
+    padding: 0px 10px 8px 10px;  
     margin: 15px 0px 0px 15px;
-    text-color: @selected;
+    text-color: @foreground;
     background-color: @background;
-    text-align: center; 
     line-height: 30px;   
     font: @font;
+    cursor-width: 11;
 }
 
 listview {
     border: 0px;
     padding: 4px 0px 13px;
     margin: 0px 0px 0px 20px;
-    columns: 1;
+    columns: 2;
     background-color: @background;
     fixed-height: false;
     lines: 7;
@@ -74,10 +74,10 @@ listview {
 
 element {
     padding: 5px;
-    border-radius: 0px;
+    border-radius: 15px;
     font: @font;
     background-color: @background;
-    text-color: @selected;
+    text-color: @foreground;
 }
 
 element-icon {
