@@ -167,8 +167,9 @@ sudo pacman -S keyd
 
 </details>
 
+![blue](https://github.com/user-attachments/assets/cc241ee5-99b9-4777-8230-5404bd820c33)
 
-![red](https://github.com/user-attachments/assets/04a09e8e-7d40-4c13-be2e-d3e6ffceab09)
+
 
 
 
