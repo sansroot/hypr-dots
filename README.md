@@ -1,4 +1,4 @@
-# A Red rice
+# A Blue rice
 ## Warning
 **Clearing the cache and logging out of Hyprland will prevent SWWW from setting the wallpaper automatically. You'll need to reapply your theme using the theme-switcher (ALT+C) or rerun the dotfiles installer.**
 
@@ -77,7 +77,7 @@ sudo pacman -S fastfetch imagemagick w3m
 ## 2. Dotfiles installation
 #### Paste it in your terminal:
 ```
-git clone -b anonymous-red https://github.com/sansroot/hypr-dots
+git clone -b anonymous-blue https://github.com/sansroot/hypr-dots
 cd hypr-dots
 sudo chmod -R 777 *
 bash ./dotfiles_installer.sh
