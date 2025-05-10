@@ -291,6 +291,25 @@ if [ "$option" == "Y" ]; then
                 sed -i "s/orientation/${orientation}x0/" ./themes/themes/misc/anonymous-red/hypr/hyprland.conf &>/dev/null
                 sed -i "s/orientation/${orientation}x0/" ./themes/themes/misc/anonymous-blue/hypr/hyprland.conf &>/dev/null
             fi
+        else
+            sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./hypr/hyprland.conf &>/dev/null
+            sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/blue/hypr/hyprland.conf &>/dev/null
+            sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/dawn/hypr/hyprland.conf &>/dev/null
+            sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/green/hypr/hyprland.conf &>/dev/null
+            sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/lavender/hypr/hyprland.conf &>/dev/null
+            sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/mauve/hypr/hyprland.conf &>/dev/null
+            sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/moon/hypr/hyprland.conf &>/dev/null
+            sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/peach/hypr/hyprland.conf &>/dev/null
+            sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/pink/hypr/hyprland.conf &>/dev/null
+            sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/red/hypr/hyprland.conf &>/dev/null
+            sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/sapphire/hypr/hyprland.conf &>/dev/null
+            sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/tokyo-night/hypr/hyprland.conf &>/dev/null
+            sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/yellow/hypr/hyprland.conf &>/dev/null
+            sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/misc/black/hypr/hyprland.conf &>/dev/null
+            sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/misc/anonymous/hypr/hyprland.conf &>/dev/null
+            sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf &>/dev/null
+            sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/misc/anonymous-red/hypr/hyprland.conf &>/dev/null
+            sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/misc/anonymous-blue/hypr/hyprland.conf &>/dev/null
         fi
     else
         sed -i "s/monitor = DP-2, 1920x1080@144, 1920x0, 1//" ./hypr/hyprland.conf &>/dev/null
@@ -312,24 +331,24 @@ if [ "$option" == "Y" ]; then
         sed -i "s/monitor = DP-2, 1920x1080@144, 1920x0, 1//" ./themes/themes/misc/anonymous-red/hypr/hyprland.conf &>/dev/null
         sed -i "s/monitor = DP-2, 1920x1080@144, 1920x0, 1//" ./themes/themes/misc/anonymous-blue/hypr/hyprland.conf &>/dev/null
 
-        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, -1920x0, 1//" ./hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, -1920x0, 1//" ./themes/themes/catppuccin/blue/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, -1920x0, 1//" ./themes/themes/catppuccin/dawn/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, -1920x0, 1//" ./themes/themes/catppuccin/green/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, -1920x0, 1//" ./themes/themes/catppuccin/lavender/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, -1920x0, 1//" ./themes/themes/catppuccin/mauve/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, -1920x0, 1//" ./themes/themes/catppuccin/moon/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, -1920x0, 1//" ./themes/themes/catppuccin/peach/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, -1920x0, 1//" ./themes/themes/catppuccin/pink/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, -1920x0, 1//" ./themes/themes/catppuccin/red/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, -1920x0, 1//" ./themes/themes/catppuccin/sapphire/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, -1920x0, 1//" ./themes/themes/catppuccin/tokyo-night/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, -1920x0, 1//" ./themes/themes/catppuccin/yellow/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, -1920x0, 1//" ./themes/themes/misc/black/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, -1920x0, 1//" ./themes/themes/misc/anonymous/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, -1920x0, 1//" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, -1920x0, 1//" ./themes/themes/misc/anonymous-red/hypr/hyprland.conf &>/dev/null
-        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, -1920x0, 1//" ./themes/themes/misc/anonymous-blue/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/blue/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/dawn/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/green/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/lavender/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/mauve/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/moon/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/peach/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/pink/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/red/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/sapphire/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/tokyo-night/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/catppuccin/yellow/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/misc/black/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/misc/anonymous/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/misc/anonymous-green/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/misc/anonymous-red/hypr/hyprland.conf &>/dev/null
+        sed -i "s/monitor = HDMI-A-1, 1920x1080@60, orientation, 1//" ./themes/themes/misc/anonymous-blue/hypr/hyprland.conf &>/dev/null
 
         sed -i "s/monitor:DP-2/monitor:$monitor/" ./hypr/hyprland.conf &>/dev/null
         sed -i "s/monitor:DP-2/monitor:$monitor/" ./themes/themes/catppuccin/blue/hypr/hyprland.conf &>/dev/null
