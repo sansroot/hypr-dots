@@ -186,8 +186,8 @@ if [ "$option" == "Y" ]; then
         fi
         echo "Do you have a third monitor? [Y/N]"
         read hypr
-        option="${hypr^^}"
-        if [ "$option" == "Y" ]; then
+        option1="${hypr^^}"
+        if [ "$option1" == "Y" ]; then
             hyprctl monitors all
             echo "type your monitor, example [HDMI-2, HDMI-A-1]"
             read monitor
