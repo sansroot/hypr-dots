@@ -23,6 +23,24 @@ window#waybar {
     border-color: #00FF66;
     transition: 0.3s;
 }
+#keyboard-state{
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    background: #00210d; 
+    color: #00FF66;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: #00FF66;
+    transition: 0.3s;    
+}
+#keyboard-state:hover{
+    color: #00210d; 
+    background: #00FF66;
+}
 #network:hover { 
     color: #00210d;
     background: #00FF66;
