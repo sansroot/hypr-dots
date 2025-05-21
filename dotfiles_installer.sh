@@ -568,7 +568,7 @@ bash ~/Documents/themes/theme-switcher.sh &> /dev/null &
 echo ""
 echo ""
 echo "*****************************"
-echo "Press any key to continue"
+echo "Press Return/Enter to continue"
 echo "*****************************"
 read
 clear
@@ -596,7 +596,7 @@ bash ~/Documents/themes/theme-switcher.sh &> /dev/null &
 echo ""
 echo ""
 echo "*****************************"
-echo "Press any key to continue"
+echo "Press Return/Enter to continue"
 echo "*****************************"
 read
 clear
