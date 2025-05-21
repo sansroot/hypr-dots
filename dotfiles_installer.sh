@@ -4,7 +4,7 @@ lista=("mauve" "blue" "green" "lavender" "peach" "pink" "red" "sapphire" "yellow
 
 clear
 usuario=$(whoami)
-usermod -a -G input $usuario
+sudo usermod -a -G input $usuario
 echo "Are you logged on Hyprland right now? [Y/N]"
 read hypr
 option="${hypr^^}"
