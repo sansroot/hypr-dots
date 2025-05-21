@@ -8,6 +8,24 @@
 window#waybar {
 	background: transparent;
 }
+#keyboard-state{
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    background: #1E1D2F; 
+    color: #a6e3a1;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: #a6e3a1;
+    transition: 0.3s;    
+}
+#keyboard-state:hover{
+    color: #1E1D2F; 
+    background: #a6e3a1;
+}
 #network {
     margin-top: 10px;
     margin-left: 8px;
