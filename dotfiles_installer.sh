@@ -528,7 +528,7 @@ sudo cp -r ./cursor/hypr-dots* -t /usr/share/icons/
 
 sudo cp -r ./gtkthemes/* -t /usr/share/themes/
 cp -r ./.zshrc ./.p10k.zsh -t ~/
-swww init &> /dev/null
+swww-daemon &> /dev/null
 swww img ~/.config/hypr/wallpaper.jpg &> /dev/null
 killall waybar &> /dev/null
 waybar &> /dev/null &
