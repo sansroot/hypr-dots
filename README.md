@@ -48,7 +48,7 @@ sudo pacman -S kitty
 ```
 #### Nerd-fonts and Awesome-fonts: 
 ```
-sudo pacman -S awesome-terminal-fonts otf-font-awesome ttf-font-awesome ttf-jetbrains-mono ttf-jetbrains-mono-nerd 
+sudo pacman -S awesome-terminal-fonts otf-font-awesome ttf-font-awesome ttf-jetbrains-mono ttf-jetbrains-mono-nerd nerd-fonts
 ```
 #### Fastfetch: 
 ```
